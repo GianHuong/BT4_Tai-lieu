@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Art of Conducting Ceremonies - Buddhist Youth Family</title>
+<style>
+:root{
+  --bg:#fdfcf4; --card:#ffffff; --accent:#ffd369; --accent2:#7ad3ff;
+  --primary:#1d67a8; --text:#333; --muted:#666; --chip:#fff5d6; --chip2:#e6f7ff;
+  --ring:#ffd36966; --active:#0f5b8e;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, Segoe UI, Tahoma, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+/* Header */
+header{
+  background: linear-gradient(120deg, #ffc94b, #f7d98c 40%, #e9f7ff);
+  color:#2b2b2b;
+  padding:24px 20px 18px;
+  box-shadow: 0 2px 6px #d0b14a66;
+  position:sticky; top:0; z-index:20;
+}
+.hero{
+  max-width:1200px; margin:0 auto;
+  display:grid; gap:10px; grid-template-columns:1fr;
+}
+.hero h1{ margin:0; font-size:1.4rem }
+.hero p{ margin:0; color:#444 }
+
+/* Layout */
+.wrap{
+  max-width:1400px; margin:14px auto; padding:0 12px;
+  display:grid; gap:14px; grid-template-columns:1fr;
+}
+@media(min-width:980px){
+  .wrap{ grid-template-columns:260px 1fr 280px; align-items:start }
+}
+
+/* Sidebar TOC */
+.sidebar{
+  position:sticky; top:88px; background:var(--card);
+  border:2px solid var(--accent); border-radius:14px; padding:12px;
+  box-shadow:0 2px 10px #0000000e;
+}
+.sidebar h3{ margin:4px 0 10px; font-size:1rem; color:var(--primary) }
+.toc{ display:flex; flex-direction:column; gap:8px; margin:0; padding:0; list-style:none }
+.toc a{
+  display:block; text-decoration:none; color:#1f3b55; font-size:0.95rem;
+  padding:8px 10px; border-radius:10px; background:#fff8e6; border:1px solid #ffe39a;
+  transition:background .2s ease, color .2s ease, transform .1s ease;
+}
+.toc a:hover{ background:#fff1c7 }
+.toc a.active{ background:#e6f7ff; border-color:#bde9ff; color:var(--active); transform:translateX(2px) }
+
+/* Tools (right) */
+.tools{
+  position:sticky; top:88px; background:var(--card);
+  border:2px solid var(--accent2); border-radius:14px; padding:12px;
+  box-shadow:0 2px 10px #0000000e;
+}
+.tools h3{ margin:4px 0 10px; font-size:1rem; color:#0f5b8e }
+.chips{ display:flex; flex-wrap:wrap; gap:8px }
+.chip{
+  padding:6px 10px; border-radius:999px; font-size:0.9rem; cursor:pointer;
+  background:var(--chip); border:1px solid #ffe39a; color:#5a4300;
+  user-select:none; transition: transform .15s ease, background .2s ease;
+}
+.chip[data-active="true"]{ background:var(--chip2); border-color:#bde9ff; color:#074f7a }
+.chip:active{ transform:scale(.98) }
+.tool-actions{ margin-top:10px; display:flex; gap:8px; flex-wrap:wrap }
+.btn{
+  background:#1d67a8; color:#fff; border:none; border-radius:10px; padding:8px 12px; cursor:pointer;
+}
+.btn.alt{ background:#00a86b }
+.btn.small{ padding:6px 10px; font-size:.85rem; border-radius:8px }
+
+/* Main content */
+.main{ display:grid; gap:14px }
+.card{
+  background:var(--card); border:2px solid var(--accent);
+  border-radius:16px; padding:10px 10px 14px; box-shadow:0 2px 10px #00000010;
+}
+
+/* Accordion */
+details{
+  border:1px solid #ffe39a; border-radius:14px; background:#fffefb;
+  margin:10px 6px; transition: box-shadow .25s ease, background .25s ease;
+}
+details[open]{ background:#fffaf2; box-shadow:0 0 0 4px var(--ring) }
+summary{
+  list-style:none; cursor:pointer; padding:14px 16px; position:relative;
+  color:var(--primary); font-weight:600; display:flex; align-items:center; gap:10px;
+}
+summary::before{
+  content:""; inline-size:10px; block-size:10px;
+  border-right:3px solid var(--primary); border-bottom:3px solid var(--primary);
+  transform:rotate(-45deg); transition:transform .2s ease; margin-right:2px;
+}
+details[open] > summary::before{ transform:rotate(45deg) }
+summary::-webkit-details-marker{ display:none }
+.content{ padding:0 16px 14px 42px; animation:fade .25s ease }
+@keyframes fade{ from{opacity:0; transform:translateY(-2px)} to{opacity:1; transform:none} }
+
+/* Split columns for wide screens */
+.split{ display:grid; gap:14px; grid-template-columns:1fr }
+@media(min-width:900px){ .split{ grid-template-columns:1fr 1fr } }
+ul{ margin:8px 0 8px 18px; padding:0; list-style:"✦ " inside }
+ol{ margin:8px 0 8px 22px }
+a{ color:#0c63bf }
+.section-tags{
+  display:flex; gap:8px; flex-wrap:wrap; margin:6px 0 6px 42px; align-items:center;
+}
+.tag{
+  font-size:.85rem; padding:5px 9px; border-radius:999px; background:#e6f7ff; border:1px solid #c8ecff; color:#07557f; cursor:pointer;
+}
+.note{ color:var(--muted) }
+.ref{ background:#eef8ff; border-left:4px solid #9ed7ff; padding:8px; border-radius:10px; margin:10px 42px }
+
+/* Key points panel */
+.keypoints{
+  margin: 6px 42px 8px;
+  padding: 10px 12px;
+  background:#fff8e6;
+  border:1px dashed #ffd369;
+  border-radius:10px;
+}
+.keypoints ul{ list-style:"• " inside }
+header .hero p { display: none; }
+
+/* ——— Mobile-friendly fixes without changing structure/content ——— */
+/* Avoid header overlap when scrolling to anchors */
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+/* Extra safety for section anchors */
+main section[id] { scroll-margin-top: 84px; }
+/* On small screens, disable sticky for sidebar/tools to prevent overlap */
+@media (max-width: 979.98px){
+  .sidebar, .tools { position: static; top: auto; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="hero">
+    <h1>THE ART OF CONDUCTING CEREMONIES IN GIA ĐÌNH PHẬT TỬ (THE BUDDHIST YOUTH FAMILY)</h1>
+    <p>Interactive layout with multi-level accordions, horizontal split, quick-filter tags, left TOC, key-points summaries, and mobile-friendly responsiveness.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <!-- Sidebar: Table of Contents -->
+  <aside class="sidebar">
+    <h3>Contents</h3>
+    <nav>
+      <ul class="toc">
+        <li><a href="#intro">Preface</a></li>
+        <li><a href="#i">I. Purpose & Value</a></li>
+        <li><a href="#ii">II. Foundational Principles</a></li>
+        <li><a href="#iii">III. Touching Consciousness</a></li>
+        <li><a href="#iv">IV. Role of Conductor</a></li>
+        <li><a href="#v">V. Conclusion</a></li>
+        <li><a href="#ref">References</a></li>
+        <li><a href="#qa">Questions for Reflection</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Preface -->
+    <section id="intro" class="card">
+      <details>
+        <summary>Preface</summary>
+        <div class="content">
+          <p>Gia Đình Phật Tử is more than an organization— it is a spiritual home where we nurture the younger generation in the Buddha's teachings. Thus, each ceremony we hold transcends mere ritual; it becomes a delicate art of education, a living expression of tri ân và báo ân— the sacred practice of recognizing and repaying gratitude.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- I -->
+    <section id="i" class="card">
+      <details>
+        <summary>I. PURPOSE & VALUE — THE HEART BEYOND THE FORM</summary>
+        <div class="section-tags">
+          <button class="btn small key-btn" aria-expanded="false" aria-controls="i-keypoints">Summary of key points</button>
+          <span class="tag" data-target=".i-core">Essence</span>
+          <span class="tag" data-target=".i-impact">Impact</span>
+          <span class="tag" data-target=".i-spirit">Spirit</span>
+        </div>
+        <div id="i-keypoints" class="keypoints" hidden>
+          <ul>
+            <li>Ceremonies build disciplined spiritual growth and preserve cultural wisdom.</li>
+            <li>Purpose must be clear to touch leaders and youth with genuine meaning.</li>
+            <li>Each ceremony mirrors discipline, practice, and collective growth.</li>
+            <li>Provides space to refine organizing skills and kindle diligent practice.</li>
+          </ul>
+        </div>
+        <div class="content split">
+          <div class="i-core">
+            <p>Our ceremonies cultivate something precious: a disciplined foundation for spiritual growth, deepening understanding of sacred rituals, and awakening wholesome aspirations in young Buddhist hearts. Through them, we preserve the thousand-year cultural wisdom of our people.</p>
+            <p>Every ceremony must radiate its purpose with clarity, touching the spirits of both Huynh Trưởng and our youth members with genuine meaning.</p>
+          </div>
+          <div class="i-impact">
+            <p>A ceremony in Gia Đình Phật Tử is never just a ritual. It is a living portrait— a mirror reflecting the beauty of our discipline and practice, marking the blossoming of each individual and our collective family. It crystallizes from the goodwill and tireless dedication of Huynh Trưởng walking alongside our young ones.</p>
+            <p class="i-spirit">More than this, ceremonies offer us an invaluable space to refine the art of organizing and conducting, to cultivate virtue within ourselves, and to kindle the flame of diligent practice on our path of service. Let us truly feel the profound meaning of each ceremony— for this understanding is the master key that opens the door to complete success.</p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- II -->
+    <section id="ii" class="card">
+      <details>
+        <summary>II. FOUNDATIONAL PRINCIPLES</summary>
+        <div class="section-tags">
+          <button class="btn small key-btn" aria-expanded="false" aria-controls="ii-keypoints">Summary of key points</button>
+          <span class="tag" data-target=".ii-types">Ceremony Types</span>
+          <span class="tag" data-target=".ii-essence">Distinct Essence</span>
+        </div>
+        <div id="ii-keypoints" class="keypoints" hidden>
+          <ul>
+            <li>Core ceremony types: Refuge, Establishment, Vows, Advancement, Insignia, Anniversary, Commemoration, Camps.</li>
+            <li>Two currents: Educational (wisdom/character) and Spiritual (heart to Dharma).</li>
+            <li>Their convergence shapes the unique identity of GĐPT ceremonies.</li>
+          </ul>
+        </div>
+        <div class="content split">
+          <div class="ii-types">
+            <p>In Gia Đình Phật Tử, ceremonies are rich in character and identity, where ideals and traditions are illuminated through the mindful art of conducting:</p>
+            <ul>
+              <li>Lễ Quy y (Taking Refuge Ceremony)</li>
+              <li>Lễ chính thức thành lập (Official Establishment/New Unit Debut)</li>
+              <li>Lễ Phát nguyện Vào Đoàn (Vow-Taking Ceremony/Lotus Pinning)</li>
+              <li>Lễ Lên Đoàn (Advancement Ceremony)</li>
+              <li>Lễ Trao cấp hiệu (Insignia Awarding/Level Advancement Vow)</li>
+              <li>Lễ Chu Niên (Anniversary Ceremony)</li>
+              <li>Lễ Hiệp Kỵ (Commemorative Ceremony for Ancestors)</li>
+              <li>Lễ khai mạc/Bế mạc (Opening/Closing of Training Camps & Retreats)</li>
+              <li>Lễ truyền đăng (Lamp Transmission)</li>
+              <li>And many others…</li>
+            </ul>
+          </div>
+          <div class="ii-essence">
+            <p>As an educational mission rooted in Buddhist spirituality, every Gia Đình Phật Tử ceremony must harmonize two essential currents:</p>
+            <ul>
+              <li>The Educational Stream — cultivating wisdom and character</li>
+              <li>The Spiritual Stream — awakening the heart to the Dharma</li>
+            </ul>
+            <p>This unique convergence creates a distinctive essence for our ceremonies, elevating them far beyond ordinary secular gatherings.</p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- III -->
+    <section id="iii" class="card">
+      <details>
+        <summary>III. TOUCHING THE CONSCIOUSNESS OF OUR YOUTH</summary>
+        <div class="section-tags">
+          <button class="btn small key-btn" aria-expanded="false" aria-controls="iii-keypoints">Summary of key points</button>
+          <span class="tag" data-target=".iii-qualities">Qualities</span>
+          <span class="tag" data-target=".iii-a">Huynh Trưởng</span>
+          <span class="tag" data-target=".iii-b">Youth Members</span>
+          <span class="tag" data-target=".iii-c">Common Rites</span>
+          <span class="tag" data-target=".iii-d">Duration</span>
+        </div>
+        <div id="iii-keypoints" class="keypoints" hidden>
+          <ul>
+            <li>Use ceremony as skillful means to plant wholesome seeds in youth consciousness.</li>
+            <li>Qualities: simple yet profound; solemn yet graceful; resonant; inspiring.</li>
+            <li>Leaders: presence as art; prepare well; master the flow; align details to meaning.</li>
+            <li>Youth: disciplined formation, practiced signals, mindful postures, inner stillness.</li>
+            <li>Programs seamless; concise content; preserve silence and significance.</li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="iii-qualities">
+            <p>The spiritual and educational dimensions form the very core of all we do. We employ the form of ceremony as a skillful means— a subtle method— to plant wholesome seeds deep in the consciousness of our young members. A ceremony that truly reaches the heart possesses these qualities:</p>
+            <ul>
+              <li>Simple yet profound — awakening the potential for insight</li>
+              <li>Solemn yet graceful — carrying dignity without heaviness</li>
+              <li>Psychologically resonant — creating beautiful impressions and lasting wholesome intentions</li>
+              <li>Inspiring — kindling enthusiasm and authentic faith</li>
+            </ul>
+            <p>Remember: young hearts do not need lengthy sutras or complex mantras beyond their understanding. What they need is genuine connection to meaning.</p>
+            <p>In essence, every ceremony must honor these core principles:</p>
+          </div>
+
+          <details class="iii-a">
+            <summary>A. From the Huynh Trưởng Committee or Organizing Team</summary>
+            <div class="content">
+              <p>1. Presence as Art</p>
+              <p>The way we carry ourselves as Huynh Trưởng shapes the atmosphere and meaning of the entire ceremony. Mastery in every gesture creates the artistry of conducting.</p>
+              <ul>
+                <li>Attire: Neat and dignified— an expression of respect for ourselves and our community</li>
+                <li>Bearing: Stand steady as a lighthouse, avoiding unnecessary movements</li>
+                <li>Gaze: Let your eyes sweep gently across the group— warm yet firm— holding everyone in peaceful attention</li>
+                <li>Voice commands: Speak with the power of convergence— clear, resonant, decisive— conveying both confidence and solemnity</li>
+              </ul>
+              <p>2. Preparation Is the Foundation of Success</p>
+              <p>Success blooms from thorough preparation. Begin with a Huynh Trưởng meeting to chart a clear path:</p>
+              <ul>
+                <li>Align on timing, content, and program; most importantly, awaken the spirit so our youth want to contribute their hands and hearts</li>
+                <li>Assign responsibilities wisely according to each person's strengths; prepare all materials with care</li>
+                <li>Monitor progress continuously, offering encouragement and adjusting as needed</li>
+              </ul>
+              <p>3. Master the Flow to Lead with Confidence</p>
+              <p>Know the sequence deeply enough to guide with both confidence and flexibility, embodying the Gia Đình Phật Tử spirit: simple, warm, and dignified.</p>
+              <p>4. The Ultimate Purpose</p>
+              <p>Every element— even the smallest detail— must harmonize to create the sacred meaning of the ceremony, breathing life into the moment and touching every heart present.</p>
+            </div>
+          </details>
+
+          <details class="iii-b">
+            <summary>B. From the Youth Members' Side</summary>
+            <div class="content">
+              <p>The Art of Gathering</p>
+              <p>Assembly should flow naturally through practiced signals: whistles, gestures, voice commands.</p>
+              <ul>
+                <li>Formation: Choose arrangements where Huynh Trưởng can observe everyone, using visual signals instead of constant verbal commands when appropriate</li>
+                <li>Formation discipline: Maintaining discipline is maintaining sacredness. Each member's position should remain consistent, not casually shifting</li>
+                <li>At-ease posture: Relaxed in spirit, yet never loose in formation</li>
+                <li>Attention posture: Flag held upright, hand pressed close to the body— showing steadiness, readiness, remaining in ranks throughout the ceremony</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="iii-c">
+            <summary>C. Common Ceremonies in Regular Practice</summary>
+            <div class="content">
+              <p>Homage to Buddha</p>
+              <p>Keep it simple yet complete and solemn, always concluding with the dedication of merit. Create a precious moment of stillness before chanting the names of Buddhas and Bodhisattvas, gently guiding the youth to visualize Their compassionate presence.</p>
+              <p>Homage to the Association</p>
+              <p>After the call and response— "Phật Tử!" "Tinh Tấn!"— everyone forms the Kattarimudra (auspicious gesture) and solemnly sings our anthem together.</p>
+              <p>Farewell</p>
+              <p>The circle of loving hands joined— this beautiful image gently closes our time together.</p>
+              <p>The highest art in ceremony is creating absolute tranquility within the mind. To achieve this, pause all vigorous activities 10 minutes before the ceremony, allowing bodies and minds to settle naturally into lightness and calm.</p>
+            </div>
+          </details>
+
+          <details class="iii-d">
+            <summary>D. Duration — Honoring Attention Spans</summary>
+            <div class="content">
+              <p>A skillful Huynh Trưởng knows how to embrace the complete meaning within an appropriate timeframe:</p>
+              <ul>
+                <li>Oanh Section (Buds): Maximum 30 minutes</li>
+                <li>Thiếu Section (Juniors): About 45 minutes</li>
+                <li>Thanh Section (Seniors): About 1 hour</li>
+              </ul>
+              <p>Let the program flow seamlessly, leaving no gaps for wandering minds. Maintain vitality with light songs or brief activities— but always subtle, never allowing them to diminish the sacred meaning.</p>
+              <p>Each ceremony is a precious gift of time. Content must be concise and meaningful, avoiding lengthy lectures. What matters most is that our youth have already touched the spirit of the ceremony through prior understanding before participating. Silence and significance must be carefully preserved.</p>
+            </div>
+          </details>
+        </div>
+      </details>
+    </section>
+
+    <!-- IV -->
+    <section id="iv" class="card">
+      <details>
+        <summary>IV. THE ROLE OF THE CONDUCTOR</summary>
+        <div class="section-tags">
+          <button class="btn small key-btn" aria-expanded="false" aria-controls="iv-keypoints">Summary of key points</button>
+          <span class="tag" data-target=".iv-1">Lead Huynh Trưởng</span>
+          <span class="tag" data-target=".iv-2">Master of Ceremonies</span>
+          <span class="tag" data-target=".iv-3">Keys to Success</span>
+        </div>
+        <div id="iv-keypoints" class="keypoints" hidden>
+          <ul>
+            <li>Leader: calm authority, clear commands, skillful energy management, warm presence.</li>
+            <li>MC: concise intros and program, maintain reverence, avoid flattery.</li>
+            <li>Keys: meaningful decor; train respectful gestures; dignified formations.</li>
+          </ul>
+        </div>
+        <div class="content split">
+          <details class="iv-1" open>
+            <summary>1. The Huynh Trưởng Leading the Assembly</summary>
+            <div class="content">
+              <p>Dynamic yet radiating calm and stability</p>
+              <p>Words humble, manner gentle, yet commands clear and authoritative</p>
+              <p>Skillfully shifts the energy so the ceremony never becomes heavy or dull</p>
+              <p>Maintains a warm smile, an open heart— tolerant, spacious, generous</p>
+            </div>
+          </details>
+
+          <details class="iv-2">
+            <summary>2. The Master of Ceremonies</summary>
+            <div class="content">
+              <ul>
+                <li>Introduces guests briefly and genuinely, avoiding empty flattery</li>
+                <li>Presents the program succinctly, emphasizing meaning and purpose</li>
+                <li>Maintains reverent attention always, never becoming casual despite familiarity</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="iv-3">
+            <summary>3. The Secret to Complete Success</summary>
+            <div class="content">
+              <p>For the ceremony to carry the taste of the Dharma, the outer form becomes a doorway to the soul. Invest thoughtfully in meaningful decoration that honors each ceremony's unique theme.</p>
+              <ul>
+                <li>To Venerable Monks and Nuns: Palms pressed together like a lotus bud before the heart, head bowed in silent reverence</li>
+                <li>To Huynh Trưởng: Standing at attention, forming the Kattarimudra, greeting with joyful respect</li>
+                <li>When introducing honored guests: Formation orderly and dignified (especially pressing palms together when introducing Venerable Sangha members)</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </details>
+    </section>
+
+    <!-- V -->
+    <section id="v" class="card">
+      <details>
+        <summary>V. CONCLUSION</summary>
+        <div class="content">
+          <p>What we have shared here is the art of applying methods flexibly— rising above rigid rules to allow each ceremony to express its complete spiritual meaning while remaining infused with both Dharma and human warmth. This reflects the spirit of loving brotherhood and the đạo vị— the taste of the Path— that defines the Vietnamese Buddhist Youth Family. Only then does each ceremony become an indelible imprint on every young heart.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- References -->
+    <section id="ref" class="card">
+      <details>
+        <summary>References</summary>
+        <div class="content">
+          <div class="ref">
+            <p><em>Source: Study Materials for the Trì Level, 2019–2021</em></p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- Q&A -->
+    <section id="qa" class="card">
+      <details>
+        <summary>QUESTIONS FOR REFLECTION</summary>
+        <div class="content">
+          <ol>
+            <li>The Role of Ceremony: In your experience, why are ceremonies in Gia Đình Phật Tử described as both a "valuable opportunity" and a "living portrait" reflecting the practice, growth, and maturation of individuals and our collective family?</li>
+            <li>The Educational and Spiritual Imprint: How might we as Huynh Trưởng transform ceremony into a skillful means to plant wholesome seeds and leave profound spiritual and educational imprints on our youth members' hearts?</li>
+            <li>The Challenge of True Understanding: What do you find most challenging when helping our youth not just participate in ceremonies, but genuinely understand their meaning and touch the spiritual experience they offer?</li>
+          </ol>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <!-- Right: quick tags and controls -->
+  <aside class="tools">
+    <h3>Quick Filter Tags</h3>
+    <div class="chips">
+      <span class="chip" data-filter=".i-core">Essence</span>
+      <span class="chip" data-filter=".i-impact">Impact</span>
+      <span class="chip" data-filter=".i-spirit">Spirit</span>
+      <span class="chip" data-filter=".ii-types">Types</span>
+      <span class="chip" data-filter=".ii-essence">Distinct Essence</span>
+      <span class="chip" data-filter=".iii-qualities">Qualities</span>
+      <span class="chip" data-filter=".iii-a">Huynh Trưởng</span>
+      <span class="chip" data-filter=".iii-b">Youth Side</span>
+      <span class="chip" data-filter=".iii-c">Common Rites</span>
+      <span class="chip" data-filter=".iii-d">Duration</span>
+      <span class="chip" data-filter=".iv-1">Lead Huynh Trưởng</span>
+      <span class="chip" data-filter=".iv-2">MC</span>
+      <span class="chip" data-filter=".iv-3">Keys to Success</span>
+    </div>
+    <div class="tool-actions">
+      <button class="btn" id="expandAll">Expand All</button>
+      <button class="btn alt" id="collapseAll">Collapse All</button>
+    </div>
+    <p class="note">Tip: Click a chip to jump and highlight; use Expand/Collapse for quick overview. Works on desktop and mobile.</p>
+  </aside>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Quick chips: filter/jump/highlight + open ancestor details
+  document.querySelectorAll('.chip').forEach(chip=>{
+    chip.addEventListener('click', ()=>{
+      const sel = chip.getAttribute('data-filter');
+      const blocks = document.querySelectorAll(sel);
+      const active = chip.getAttribute('data-active') === 'true';
+      chip.setAttribute('data-active', active ? 'false' : 'true');
+      if(blocks.length){
+        const el = blocks[0].closest('section') || blocks[0];
+        let p = blocks[0].closest('details');
+        while(p){ p.setAttribute('open',''); p = p.parentElement?.closest?.('details'); }
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+        blocks.forEach(b=>{
+          b.style.outline = '3px solid #7ad3ff';
+          b.style.borderRadius = '10px';
+          setTimeout(()=>{ b.style.outline='none'; }, 1000);
+        });
+      }
+    });
+  });
+
+  // In-section tags: jump to targeted block + open ancestor details
+  document.querySelectorAll('.tag').forEach(tag=>{
+    tag.addEventListener('click', ()=>{
+      const sel = tag.getAttribute('data-target');
+      const target = document.querySelector(sel);
+      if(target){
+        let p = target.closest('details');
+        while(p){ p.setAttribute('open',''); p = p.parentElement?.closest?.('details'); }
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  });
+
+  // Key summary toggle buttons
+  document.querySelectorAll('.key-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const id = btn.getAttribute('aria-controls');
+      const panel = document.getElementById(id);
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if(panel){ expanded ? panel.setAttribute('hidden','') : panel.removeAttribute('hidden'); }
+    });
+  });
+
+  // Expand/Collapse All
+  function getAllDetails(){ return Array.from(document.querySelectorAll('details')); }
+  const btnExpand = document.getElementById('expandAll');
+  const btnCollapse = document.getElementById('collapseAll');
+  if(btnExpand){ btnExpand.addEventListener('click', ()=>{ getAllDetails().forEach(d=> d.setAttribute('open','')); }); }
+  if(btnCollapse){ btnCollapse.addEventListener('click', ()=>{ getAllDetails().forEach(d=> d.removeAttribute('open')); }); }
+
+  // Active TOC highlighting with adaptive margins
+  const sections = Array.from(document.querySelectorAll('main section[id]'));
+  const tocLinks = Array.from(document.querySelectorAll('.toc a'));
+  const linkById = new Map(tocLinks.map(a => [a.getAttribute('href').slice(1), a]));
+  const mql = window.matchMedia('(min-width: 980px)');
+  function makeObserver(isWide){
+    const topOffset = isWide ? -80 : -120;
+    const bottomOffset = isWide ? -40 : -60;
+    return new IntersectionObserver((entries)=>{
+      let best = null;
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          if(!best || entry.intersectionRatio > best.intersectionRatio) best = entry;
+        }
+      });
+      if(best){
+        const id = best.target.getAttribute('id');
+        const link = linkById.get(id);
+        if(link){
+          tocLinks.forEach(a=>a.classList.remove('active'));
+          link.classList.add('active');
+        }
+      }
+    }, { root:null, threshold:[0.25,0.5,0.75,1], rootMargin:`${topOffset}px 0px ${bottomOffset}px 0px` });
+  }
+  let io = makeObserver(mql.matches);
+  sections.forEach(sec=> io.observe(sec));
+  if(mql.addEventListener){
+    mql.addEventListener('change', (e)=>{
+      io.disconnect();
+      io = makeObserver(e.matches);
+      sections.forEach(sec=> io.observe(sec));
+    });
+  }
+
+  // TOC click: open ancestor details + smooth scroll + keep hash
+  document.querySelectorAll('.toc a').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if(target){
+        let p = target.closest('details');
+        while(p){ p.setAttribute('open',''); p = p.parentElement?.closest?.('details'); }
+        target.scrollIntoView({ behavior:'smooth', block:'start' });
+        history.replaceState(null, '', `#${id}`);
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
