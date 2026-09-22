@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tâm Lý Quần Chúng Trong Giáo Dục Phật Giáo</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪷</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,500&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF6EF;
+  --bg-card:#FFFDF8;
+  --ink:#3E3A34;
+  --ink-soft:#6E6759;
+  --ink-faint:#9A927F;
+  --border:#EFE3D0;
+  --sage:#8FB988;
+  --sage-ink:#3E5C3B;
+  --sage-bg:#E8F1E4;
+  --lotus:#E8A3B0;
+  --lotus-ink:#7A3A44;
+  --lotus-bg:#FBE7EA;
+  --saffron:#E7BA53;
+  --saffron-ink:#6B5220;
+  --saffron-bg:#FBF0D9;
+  --sky:#93BEDB;
+  --sky-ink:#2E5470;
+  --sky-bg:#E5F0F7;
+  --shadow: 0 2px 10px rgba(62,58,52,0.06), 0 1px 2px rgba(62,58,52,0.05);
+  --radius: 18px;
+  color-scheme: light;
+}
+:root:not([data-theme="light"]) { }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#211E1A;
+    --bg-card:#2A2620;
+    --ink:#F1EAD9;
+    --ink-soft:#C9BFA9;
+    --ink-faint:#938972;
+    --border:#3C362C;
+    --sage:#9DC896;
+    --sage-ink:#DDF0D7;
+    --sage-bg:#31402E;
+    --lotus:#EDB2BE;
+    --lotus-ink:#F7DEE2;
+    --lotus-bg:#402B30;
+    --saffron:#EFC46B;
+    --saffron-ink:#F8E6BC;
+    --saffron-bg:#453A22;
+    --sky:#A4CBE3;
+    --sky-ink:#DDEEF7;
+    --sky-bg:#28384A;
+    --shadow: 0 2px 14px rgba(0,0,0,0.35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#211E1A;
+  --bg-card:#2A2620;
+  --ink:#F1EAD9;
+  --ink-soft:#C9BFA9;
+  --ink-faint:#938972;
+  --border:#3C362C;
+  --sage:#9DC896;
+  --sage-ink:#DDF0D7;
+  --sage-bg:#31402E;
+  --lotus:#EDB2BE;
+  --lotus-ink:#F7DEE2;
+  --lotus-bg:#402B30;
+  --saffron:#EFC46B;
+  --saffron-ink:#F8E6BC;
+  --saffron-bg:#453A22;
+  --sky:#A4CBE3;
+  --sky-ink:#DDEEF7;
+  --sky-bg:#28384A;
+  --shadow: 0 2px 14px rgba(0,0,0,0.35);
+  color-scheme: dark;
+}
+*{box-sizing:border-box;}
+html{scroll-padding-top: calc(84px + env(safe-area-inset-top,0px));}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Be Vietnam Pro', -apple-system, 'Segoe UI', sans-serif;
+  line-height:1.65;
+  padding-top: env(safe-area-inset-top,0px);
+  padding-bottom: env(safe-area-inset-bottom,0px);
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,h5{
+  font-family:'Literata', Georgia, 'Times New Roman', serif;
+  font-weight:600;
+  line-height:1.28;
+  margin:0 0 .5em 0;
+  color:var(--ink);
+}
+a{color:var(--sage-ink);}
+p{margin:0 0 1em 0;}
+ul{margin:0 0 1em 0;padding-left:1.3em;}
+li{margin-bottom:.5em;}
+blockquote{
+  margin:0 0 1em 0;
+  padding:.7em 1.1em;
+  border-left:3px solid var(--sage);
+  background:var(--sage-bg);
+  border-radius:0 10px 10px 0;
+  font-style:italic;
+  color:var(--ink-soft);
+}
+.container{max-width:720px;margin:0 auto;padding:0 18px;}
+
+/* ---------- HEADER ---------- */
+header.topbar{
+  position:sticky;
+  top:0;
+  z-index:40;
+  background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+  padding-top:env(safe-area-inset-top,0px);
+}
+.topbar-inner{
+  max-width:720px;margin:0 auto;padding:12px 18px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.brand{display:flex;align-items:center;gap:8px;min-width:0;}
+.brand .emoji{font-size:22px;}
+.brand-text{font-family:'Literata',serif;font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.top-back-btn{
+  display:none;align-items:center;gap:7px;flex-shrink:0;
+  padding:8px 14px 8px 12px;border-radius:999px;border:1.5px solid var(--sage);
+  background:var(--sage-bg);color:var(--sage-ink);
+  cursor:pointer;font-family:inherit;font-weight:700;font-size:13.5px;
+}
+.top-back-btn.show{display:flex;}
+.top-back-btn:active{filter:brightness(0.97);}
+.lang-toggle{
+  display:flex;background:var(--bg-card);border:1px solid var(--border);border-radius:999px;padding:3px;flex-shrink:0;
+}
+.lang-toggle button{
+  border:none;background:transparent;padding:6px 12px;border-radius:999px;
+  font-family:inherit;font-weight:700;font-size:13px;color:var(--ink-faint);cursor:pointer;
+  transition:background .2s, color .2s;
+}
+.lang-toggle button.active{background:var(--sage);color:#20331E;}
+.progress-row{max-width:720px;margin:0 auto;padding:0 18px 12px 18px;display:flex;gap:8px;}
+.progress-step{
+  flex:1;display:flex;flex-direction:column;gap:6px;align-items:flex-start;
+}
+.progress-bar{height:6px;width:100%;border-radius:999px;background:var(--border);overflow:hidden;}
+.progress-bar > span{display:block;height:100%;width:0%;background:var(--sage);border-radius:999px;transition:width .35s ease;}
+.progress-label{font-size:11.5px;font-weight:700;color:var(--ink-faint);letter-spacing:.01em;}
+.progress-step.current .progress-label{color:var(--ink);}
+.progress-step.done .progress-bar > span{background:var(--sage);}
+
+main{padding-bottom: calc(104px + env(safe-area-inset-bottom,0px));}
+main.container{padding:22px 18px calc(104px + env(safe-area-inset-bottom,0px)) 18px;}
+
+/* ---------- HERO (stage read only) ---------- */
+.hero{padding:6px 0 22px 0;}
+.hero h1{font-size:26px;letter-spacing:-0.01em;}
+.hero .subtitle{color:var(--ink-soft);font-size:15.5px;margin-top:2px;}
+.hero .lotus-mark{font-size:30px;display:block;margin-bottom:10px;}
+
+/* ---------- ACCORDION SECTIONS ---------- */
+.section-card{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  margin-bottom:14px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  border-left:5px solid var(--accent, var(--sage));
+}
+.section-head{
+  width:100%;
+  display:flex;align-items:center;gap:12px;
+  padding:16px 18px;
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  text-align:left;
+  font-family:inherit;
+  color:var(--ink);
+}
+.section-head .num{
+  flex-shrink:0;
+  width:30px;height:30px;border-radius:50%;
+  background:var(--accent-bg, var(--sage-bg));
+  color:var(--accent-ink, var(--sage-ink));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:13px;font-family:'Literata',serif;
+}
+.section-head .num.check{background:var(--sage);color:#20331E;}
+.section-head .htitle{flex:1;font-family:'Literata',serif;font-weight:600;font-size:17px;min-width:0;}
+.section-head .chev{flex-shrink:0;transition:transform .25s ease;color:var(--ink-faint);}
+.section-card.open .chev{transform:rotate(180deg);}
+.section-body{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .35s ease;
+}
+.section-card.open .section-body{max-height:none;}
+.section-body-inner{padding:0 18px 20px 18px;font-size:15.5px;color:var(--ink-soft);}
+.section-body-inner h4{font-size:16.5px;color:var(--ink);margin-top:1.1em;}
+.section-body-inner h5{font-size:15px;color:var(--ink);margin-top:1em;}
+.section-body-inner strong{color:var(--ink);}
+.section-body-inner .callout{
+  background:var(--saffron-bg);border:1px solid var(--saffron);border-radius:12px;padding:12px 14px;margin:0 0 1em 0;
+  font-size:14.5px;
+}
+.section-body-inner .callout strong{color:var(--saffron-ink);}
+.collapse-btn{
+  display:flex;align-items:center;justify-content:center;gap:6px;width:100%;margin-top:18px;
+  padding:10px 14px;border-radius:12px;border:1px dashed var(--border);background:transparent;
+  font-family:inherit;font-weight:700;font-size:13px;color:var(--ink-faint);cursor:pointer;
+}
+.collapse-btn:hover{color:var(--ink-soft);border-color:var(--ink-faint);}
+.thinker{border-top:1px dashed var(--border);padding-top:14px;margin-top:14px;}
+.thinker:first-of-type{border-top:none;margin-top:0;padding-top:0;}
+.thinker h4{margin-bottom:.4em;}
+.thinker .meta{font-weight:400;color:var(--ink-faint);font-size:.85em;}
+.thinker .critique{background:var(--lotus-bg);border-radius:10px;padding:10px 12px;font-size:14px;}
+.thinker .critique strong{color:var(--lotus-ink);}
+
+/* ---------- MINI ACCORDION (nested, inside Part 3) ---------- */
+.mini-acc{
+  border:1px solid var(--border);
+  border-radius:14px;
+  margin:14px 0;
+  background:color-mix(in srgb, var(--bg-card) 60%, var(--bg) 40%);
+  overflow:hidden;
+}
+.mini-head{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:12px 14px;background:transparent;border:none;cursor:pointer;text-align:left;
+  font-family:'Literata',serif;font-weight:600;font-size:15px;color:var(--ink);
+}
+.mini-chev{flex-shrink:0;color:var(--ink-faint);transition:transform .25s ease;}
+.mini-acc.open > .mini-head .mini-chev{transform:rotate(180deg);}
+.mini-body{max-height:0;overflow:hidden;transition:max-height .32s ease;}
+.mini-acc.open > .mini-body{max-height:none;}
+.mini-body-inner{padding:0 14px 14px 14px;font-size:15px;}
+.mini-acc .mini-acc{background:transparent;border-color:var(--border);}
+.mini-acc .mini-acc .mini-head{font-size:14.5px;font-weight:600;}
+
+/* ---------- TIMELINE ---------- */
+.timeline-wrap{margin:18px 0 22px 0;padding:16px 14px 14px 14px;background:var(--sky-bg);border-radius:16px;border:1px solid var(--sky);}
+.timeline-title{font-size:12.5px;font-weight:700;color:var(--sky-ink);text-transform:uppercase;letter-spacing:.02em;margin-bottom:12px;}
+.timeline-track{display:flex;overflow-x:auto;gap:0;padding-bottom:6px;-webkit-overflow-scrolling:touch;}
+.timeline-node{flex:0 0 auto;width:132px;display:flex;flex-direction:column;align-items:flex-start;position:relative;padding-right:14px;cursor:pointer;background:none;border:none;text-align:left;font-family:inherit;}
+.timeline-node .tl-line{position:absolute;top:7px;left:0;width:100%;height:2px;background:var(--sky);}
+.timeline-node:last-child .tl-line{width:0;}
+.timeline-node .tl-dot{width:14px;height:14px;border-radius:50%;background:var(--sky-ink);border:3px solid var(--sky-bg);position:relative;z-index:2;margin-bottom:8px;}
+.timeline-node .tl-year{font-size:11.5px;font-weight:700;color:var(--sky-ink);}
+.timeline-node .tl-name{font-size:12.5px;font-weight:600;color:var(--ink);margin-top:1px;line-height:1.25;}
+.timeline-node .tl-idea{font-size:11px;color:var(--ink-soft);margin-top:2px;line-height:1.3;}
+
+/* ---------- BACK TO TOP (flash/quiz) ---------- */
+.back-top-row{display:flex;justify-content:flex-start;margin-bottom:10px;}
+.back-top-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  background:transparent;border:1px solid var(--border);border-radius:999px;
+  padding:6px 12px;font-size:12.5px;font-weight:700;color:var(--ink-soft);cursor:pointer;font-family:inherit;
+}
+
+.table-wrap{overflow-x:auto;margin-bottom:1em;-webkit-overflow-scrolling:touch;}
+table.glossary{border-collapse:collapse;width:100%;min-width:480px;font-size:14px;}
+table.glossary th{
+  text-align:left;background:var(--sage-bg);color:var(--sage-ink);
+  padding:9px 10px;font-family:'Literata',serif;font-weight:600;font-size:13px;
+  position:sticky;top:0;
+}
+table.glossary td{padding:9px 10px;border-top:1px solid var(--border);vertical-align:top;}
+table.glossary tr:nth-child(odd){background:color-mix(in srgb, var(--bg-card) 60%, var(--bg) 40%);}
+
+ul.refs{padding-left:1.1em;font-size:14.5px;color:var(--ink-soft);}
+ul.refs li{margin-bottom:.65em;}
+
+.fn-ref{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:19px;height:19px;border-radius:50%;
+  background:var(--sky-bg);color:var(--sky-ink);
+  font-size:10.5px;font-weight:700;border:1px solid var(--sky);
+  cursor:pointer;vertical-align:super;margin:0 1px;
+  font-family:'Be Vietnam Pro',sans-serif;padding:0;
+}
+
+/* ---------- CONTINUE BAR ---------- */
+.continue-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:35;
+  background:color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter:blur(10px);
+  border-top:1px solid var(--border);
+  padding:12px 18px calc(12px + env(safe-area-inset-bottom,0px)) 18px;
+}
+.continue-bar-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:14px;}
+.continue-status{font-size:13px;color:var(--ink-faint);font-weight:600;}
+.btn{
+  border:none;border-radius:999px;padding:12px 22px;font-weight:700;font-size:14.5px;
+  font-family:'Be Vietnam Pro',sans-serif;cursor:pointer;
+  background:var(--sage);color:#20331E;
+  transition:transform .15s ease, opacity .15s ease, box-shadow .15s ease;
+  box-shadow:0 4px 14px rgba(143,185,136,.35);
+}
+.btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none;}
+.btn:not(:disabled):active{transform:scale(.97);}
+.btn.secondary{background:transparent;color:var(--ink-soft);box-shadow:none;border:1px solid var(--border);}
+
+/* ---------- MODAL (footnotes) ---------- */
+.modal-backdrop{
+  position:fixed;inset:0;background:rgba(30,26,20,.45);
+  display:flex;align-items:flex-end;justify-content:center;z-index:100;
+  opacity:0;pointer-events:none;transition:opacity .2s ease;
+}
+.modal-backdrop.show{opacity:1;pointer-events:auto;}
+.modal-sheet{
+  background:var(--bg-card);border-radius:20px 20px 0 0;max-width:560px;width:100%;
+  padding:20px 22px calc(22px + env(safe-area-inset-bottom,0px)) 22px;
+  transform:translateY(20px);transition:transform .25s ease;
+  box-shadow:0 -6px 24px rgba(0,0,0,.15);
+  max-height:70vh;overflow-y:auto;
+}
+.modal-backdrop.show .modal-sheet{transform:translateY(0);}
+@media (min-width:640px){
+  .modal-backdrop{align-items:center;}
+  .modal-sheet{border-radius:20px;}
+}
+.modal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.modal-head .tag{font-size:12px;font-weight:700;color:var(--sky-ink);background:var(--sky-bg);padding:3px 9px;border-radius:999px;}
+.modal-close{background:var(--border);border:none;width:28px;height:28px;border-radius:50%;font-size:15px;cursor:pointer;color:var(--ink);}
+.modal-body{font-size:15px;color:var(--ink-soft);}
+
+/* ---------- FLASHCARDS ---------- */
+.stage-panel{min-height:50vh;}
+.flash-wrap{display:flex;flex-direction:column;align-items:center;padding-top:6px;}
+.flash-counter{font-size:13px;font-weight:700;color:var(--ink-faint);margin-bottom:10px;}
+.flash-scene{width:100%;max-width:480px;height:clamp(180px, 36vh, 320px);perspective:1700px;margin-bottom:16px;}
+.flash-card{
+  position:relative;width:100%;height:100%;cursor:pointer;
+  transform-style:preserve-3d;
+}
+.flash-card.flipped{transform:rotateY(180deg);}
+@keyframes flipToBack{
+  0%{transform:rotateY(0deg) scale(1);}
+  45%{transform:rotateY(100deg) scale(1.07);}
+  100%{transform:rotateY(180deg) scale(1);}
+}
+@keyframes flipToFront{
+  0%{transform:rotateY(180deg) scale(1);}
+  45%{transform:rotateY(80deg) scale(1.07);}
+  100%{transform:rotateY(0deg) scale(1);}
+}
+.flash-card.flip-to-back{animation:flipToBack .58s cubic-bezier(.3,.1,.3,1) both;}
+.flash-card.flip-to-front{animation:flipToFront .58s cubic-bezier(.3,.1,.3,1) both;}
+.flash-card:active{filter:brightness(0.98);}
+.flash-face{
+  position:absolute;inset:0;backface-visibility:hidden;
+  border-radius:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:26px;box-shadow:0 10px 26px rgba(62,58,52,.12), 0 2px 8px rgba(62,58,52,.06);border:1px solid var(--border);
+  overflow-y:auto;
+}
+.flash-face.front{background:var(--bg-card);}
+.flash-face.back{background:var(--sage-bg);transform:rotateY(180deg);}
+.flash-face .kicker{font-size:12px;font-weight:700;letter-spacing:.02em;color:var(--ink-faint);margin-bottom:14px;}
+.flash-face .term{font-family:'Literata',serif;font-size:22px;font-weight:600;color:var(--ink);}
+.flash-face .term-repeat{font-family:'Literata',serif;font-size:15px;font-weight:600;color:var(--sage-ink);margin-bottom:8px;}
+.flash-face .def{font-size:15.5px;color:var(--sage-ink);line-height:1.6;}
+.flash-face .tap-hint{position:absolute;bottom:14px;font-size:12px;color:var(--ink-faint);}
+.flash-nav{display:flex;align-items:center;gap:16px;}
+.flash-dot-row{display:flex;gap:5px;flex-wrap:wrap;max-width:280px;justify-content:center;margin-top:12px;}
+.flash-dot{width:7px;height:7px;border-radius:50%;background:var(--border);}
+.flash-dot.seen{background:var(--sage);}
+.flash-dot.current{background:var(--lotus);}
+.iconbtn{
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--border);background:var(--bg-card);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);
+}
+.iconbtn:disabled{opacity:.35;cursor:not-allowed;}
+
+/* ---------- QUIZ ---------- */
+.quiz-progress{font-size:13px;font-weight:700;color:var(--ink-faint);margin-bottom:10px;}
+.quiz-q{font-family:'Literata',serif;font-size:19px;font-weight:600;margin-bottom:16px;}
+.quiz-options{display:flex;flex-direction:column;gap:10px;margin-bottom:20px;}
+.quiz-option{
+  text-align:left;padding:13px 16px;border-radius:14px;border:1.5px solid var(--border);
+  background:var(--bg-card);font-family:inherit;font-size:15px;color:var(--ink);cursor:pointer;
+  transition:border-color .15s, background .15s;
+}
+.quiz-option.selected{border-color:var(--sage);background:var(--sage-bg);}
+.quiz-option.correct{border-color:var(--sage);background:var(--sage-bg);}
+.quiz-option.wrong{border-color:var(--lotus);background:var(--lotus-bg);}
+.quiz-explain{
+  background:var(--sky-bg);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--sky-ink);margin-bottom:14px;
+}
+.quiz-dot-row{display:flex;gap:6px;margin-bottom:18px;flex-wrap:wrap;}
+.quiz-dot{width:26px;height:26px;border-radius:8px;background:var(--border);border:none;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--ink-faint);font-family:inherit;cursor:pointer;}
+.quiz-dot.answered{background:var(--sage-bg);color:var(--sage-ink);}
+.quiz-dot.current{outline:2px solid var(--sage);outline-offset:1px;}
+.quiz-retry-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  background:transparent;border:1px dashed var(--border);border-radius:999px;
+  padding:8px 14px;font-family:inherit;font-weight:700;font-size:12.5px;color:var(--ink-faint);
+  cursor:pointer;margin-bottom:16px;
+}
+.retake-btn{margin-top:18px;background:var(--saffron);color:#4A3A10;box-shadow:0 4px 14px rgba(231,186,83,.35);display:inline-flex;align-items:center;gap:7px;}
+
+/* ---------- RESULTS ---------- */
+.results{text-align:center;padding:20px 0 10px 0;}
+.results .big-emoji{font-size:56px;display:block;margin-bottom:6px;}
+.results h2{font-size:22px;}
+.results .score{font-family:'Literata',serif;font-size:40px;font-weight:700;color:var(--sage-ink);margin:6px 0 2px 0;}
+.results .congrats{
+  margin-top:16px;background:var(--saffron-bg);border:1px solid var(--saffron);border-radius:16px;
+  padding:18px 20px;font-size:16px;font-weight:600;color:var(--saffron-ink);line-height:1.5;
+}
+.results .review-title{margin-top:26px;font-family:'Literata',serif;font-size:16px;text-align:left;}
+.review-item{text-align:left;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:12px 14px;margin-top:10px;font-size:14px;}
+.review-item .q{font-weight:700;margin-bottom:4px;}
+.review-item .a-correct{color:var(--sage-ink);}
+.review-item .a-wrong{color:var(--lotus-ink);}
+
+/* ---------- CONFETTI & FIREWORKS ---------- */
+.confetti-piece{
+  position:fixed;top:-20px;z-index:200;border-radius:2px;pointer-events:none;
+  animation:confetti-fall linear forwards;
+}
+@keyframes confetti-fall{
+  to{transform:translateY(110vh) rotate(var(--rot));opacity:.9;}
+}
+.spark{
+  position:fixed;z-index:201;border-radius:50%;pointer-events:none;
+  animation:spark-burst ease-out forwards;
+}
+@keyframes spark-burst{
+  0%{transform:translate(0,0) scale(1);opacity:1;}
+  100%{transform:translate(var(--dx),var(--dy)) scale(.2);opacity:0;}
+}
+.results .big-emoji{animation:emoji-pop .6s cubic-bezier(.2,1.4,.4,1);}
+@keyframes emoji-pop{
+  0%{transform:scale(0.3);opacity:0;}
+  60%{transform:scale(1.15);opacity:1;}
+  100%{transform:scale(1);}
+}
+
+@media (max-width:420px){
+  .hero h1{font-size:22px;}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand" id="brandGroup">
+      <span class="emoji">🪷</span>
+      <span class="brand-text" id="brandText">Tâm Lý Quần Chúng</span>
+    </div>
+    <button class="top-back-btn" id="topBackBtn" onclick="goToRead()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span id="topBackLabel">Đọc tài liệu</span>
+    </button>
+    <div class="lang-toggle" role="group" aria-label="Ngôn ngữ / Language">
+      <button id="btnLangVi" class="active" onclick="setLang('vi')">VI</button>
+      <button id="btnLangEn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+  <div class="progress-row">
+    <div class="progress-step" data-stage="read">
+      <span class="progress-label" data-i18n-label="read"></span>
+      <span class="progress-bar"><span id="pbRead"></span></span>
+    </div>
+    <div class="progress-step" data-stage="flash">
+      <span class="progress-label" data-i18n-label="flash"></span>
+      <span class="progress-bar"><span id="pbFlash"></span></span>
+    </div>
+    <div class="progress-step" data-stage="quiz">
+      <span class="progress-label" data-i18n-label="quiz"></span>
+      <span class="progress-bar"><span id="pbQuiz"></span></span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div id="stageRead" class="stage-panel"></div>
+  <div id="stageFlash" class="stage-panel" style="display:none;"></div>
+  <div id="stageQuiz" class="stage-panel" style="display:none;"></div>
+</main>
+
+<div class="continue-bar" id="continueBar">
+  <div class="continue-bar-inner">
+    <span class="continue-status" id="continueStatus"></span>
+    <button class="btn" id="continueBtn"></button>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="fnModal" onclick="closeFn(event)">
+  <div class="modal-sheet" onclick="event.stopPropagation()">
+    <div class="modal-head">
+      <span class="tag" id="fnTag">Ghi chú</span>
+      <button class="modal-close" onclick="closeFn()">✕</button>
+    </div>
+    <div class="modal-body" id="fnBody"></div>
+  </div>
+</div>
+
+<script id="artifact-data" type="application/json">{"footnotes": {"vi": {"1": "(saṅkhāra, gọi đầy đủ là saṅkhārakkhandha — Hành uẩn): Tập hợp các phản ứng, khuynh hướng và sự tạo tác của tâm trí. Nó đóng vai trò như “động cơ” của ý chí, thúc đẩy chúng ta đưa ra các quyết định, hành động và từ đó hình thành nên nghiệp lực.", "2": "Lokasamaññā (quy ước, danh xưng thế gian): x. Dīgha Nikāya 9 — Kinh Bố-sá-bà-lâu (Poṭṭhapāda Sutta). Parisā-sārajja (rụt rè, sợ hãi trước hội chúng): thuật ngữ Pāli, x. Từ điển Pāli-Anh của Hội Pali Text Society, mục Sārajja.", "3": "Chủng tử (bīja): khái niệm trung tâm của Duy Thức học (Yogācāra) — một hệ thống tư tưởng Đại thừa hình thành khoảng thế kỷ 4–5, gắn liền với các luận sư Vô Trước và Thế Thân. Theo đó, mọi hành vi, lời nói, ý nghĩ đều gieo “hạt giống” tiềm ẩn trong tạng thức (a-lại-da thức); khi đủ duyên, hạt giống ấy “hiện hành” thành tâm lý, hành vi mới. Đây là khái niệm riêng của Duy Thức, không có trong kinh tạng Nguyên thủy đã dẫn ở các mục khác của tài liệu.", "4": "“Tứ nhiếp Pháp” đã được trình bày trong bậc học ngành Thiếu, sẽ được học sâu hơn trong CTHL A Dục.", "5": "“Lục Hòa” đã được trình bày trong bậc học ngành Thiếu, sẽ được học sâu hơn trong CTHL A Dục."}, "en": {"1": "Saṅkhāra (fully known as saṅkhārakkhandha — Aggregate of Mental Formations): The totality of psychological reactions, tendencies, and volitional activities. It acts as the “engine” of the will, driving human actions and shaping karmic momentum.", "2": "Lokasamaññā (worldly convention, designation): see Dīgha Nikāya 9, the Poṭṭhapāda Sutta. Parisā-sārajja (timidity, fear before an assembly): a Pāli term; see the Pāli–English Dictionary of the Pali Text Society, entry for sārajja.", "3": "Seed (bīja): a central concept in Yogācāra (Consciousness-Only / Mind-Only thought) — a Mahāyāna system that emerged around the fourth to fifth centuries, associated with the treatise-masters Asaṅga and Vasubandhu. According to this system, every action, word, and thought plants a latent “seed” in the store-consciousness (ālaya-vijñāna); when conditions are sufficient, that seed “manifests” as new mental states or behavior. This is a concept specific to Yogācāra and is not found in the early canonical texts cited elsewhere in this document.", "4": "The “Four Saṅgahavatthu” is introduced at the Thiếu (adolescent) level of study and will be studied in greater depth in the A Dục leadership training program (CTHL A Dục).", "5": "The “Six Harmonies” is introduced at the Thiếu (adolescent) level of study and will be studied in greater depth in the A Dục leadership training program (CTHL A Dục)."}}, "timeline": [{"year": "1890", "anchor": "th-tarde", "name": "Gabriel Tarde", "idea": {"vi": "Xã hội vận hành qua bắt chước", "en": "Society operates through imitation"}}, {"year": "1895", "anchor": "th-lebon", "name": "Gustave Le Bon", "idea": {"vi": "Đám đông dễ bị cuốn theo cảm xúc", "en": "Crowds are easily swept up by emotion"}}, {"year": "1901", "anchor": "th-tarde", "name": "Gabriel Tarde", "idea": {"vi": "Phân biệt “đám đông” và “công chúng”", "en": "Distinguishes “crowd” from “public”"}}, {"year": "1921", "anchor": "th-freud", "name": "Sigmund Freud", "idea": {"vi": "Gắn bó cảm xúc với người lãnh đạo", "en": "Emotional attachment to the leader"}}, {"year": "1968", "anchor": "th-darley", "name": "Darley & Latané", "idea": {"vi": "Hiệu ứng bàng quan (Bystander Effect)", "en": "The Bystander Effect"}}, {"year": "1972", "anchor": "th-janis", "name": "Irving Janis", "idea": {"vi": "Tư duy nhóm (Groupthink)", "en": "Groupthink"}}, {"year": "1979", "anchor": "th-tajfel", "name": "Tajfel & Turner", "idea": {"vi": "Lý thuyết Căn tính Xã hội", "en": "Social Identity Theory"}}, {"year": "1996–nay", "anchor": "th-esim", "name": "Reicher, Drury & Stott", "idea": {"vi": "Mô hình Căn tính Xã hội Mở rộng (ESIM)", "en": "Elaborated Social Identity Model (ESIM)"}}], "meta": {"title": {"vi": "Tâm Lý Quần Chúng Trong Giáo Dục Phật Giáo", "en": "Mass Psychology in Buddhist Education"}, "subtitle": {"vi": "Tài liệu tu học dành cho Huynh trưởng GĐPT", "en": "A study document for GĐPT Youth Leaders"}}, "sections": [{"id": "intro", "title": {"vi": "Mở đầu", "en": "Introduction"}, "html": {"vi": "\n<p>Trong Gia Đình Phật Tử (GĐPT), Huynh trưởng và đoàn sinh cùng sinh hoạt chung dưới nhiều hình thức: đội, chúng, đoàn, đơn vị, trại, lễ, cuộc họp, công tác xã hội, nhóm chat và các không gian truyền thông. Mỗi người có suy nghĩ, cảm xúc và trách nhiệm riêng; đồng thời, mỗi người cũng chịu ảnh hưởng của bạn bè, người hướng dẫn, truyền thống, dư luận và các quy tắc chung của tổ chức.</p>\n<p>Hiểu tâm lý quần chúng (mass psychology) là hiểu cách con người suy nghĩ, cảm nhận và hành động khác đi khi ở trong đám đông hay trong một đoàn thể, so với khi ở một mình. Hiểu về nó không nhằm học \"kỹ thuật điều khiển đám đông\" — mà để nhận diện ảnh hưởng đó ngay khi nó đang xảy ra, và dùng ánh sáng của giáo pháp soi rọi, giúp mỗi người làm chủ tâm, lời nói và hành vi của mình trong mọi hoàn cảnh. Qua đó, chúng ta cùng nhau xây dựng một đoàn thể có trí tuệ, từ bi, hỷ xả, tinh tấn và thanh tịnh.</p>\n<div class=\"callout\">\n<p><strong>Lưu ý trong suốt tài liệu:</strong> các khái niệm Phật học được đối chiếu ở đây (vô minh, chủng tử, tưởng tri thế gian…) không phải là bản dịch 1-1 của thuật ngữ tâm lý học hiện đại. Đây là hai hệ thống tri thức ra đời cách nhau hàng ngàn năm, với hai mục tiêu khác nhau — một bên mô tả hành vi, một bên chỉ ra con đường giải thoát.</p>\n</div>\n", "en": "\n<p>In the Gia Đình Phật Tử (GĐPT — the Buddhist Youth Family), Youth Leaders (Huynh trưởng) and members share communal life in many forms: teams, groups, troops, units, camps, ceremonies, meetings, community service, chat groups, and other media spaces. Each person carries their own thoughts, feelings, and responsibilities; at the same time, each person is also shaped by friends, mentors, tradition, public opinion, and the organization's shared rules.</p>\n<p>To understand mass psychology is to understand how people think, feel, and act differently when part of a crowd or a group than when alone. The purpose of understanding it is not to learn \"techniques for controlling a crowd\" — but to recognize that influence the moment it arises, and to let the light of the Dharma illuminate it, helping each person master their own mind, speech, and conduct in every circumstance. Through this, we build together a community grounded in Diligence, Joyful Equanimity, Purity, Wisdom, Compassion.</p>\n<div class=\"callout\">\n<p><strong>A note that applies throughout this document:</strong> the Buddhist concepts referenced here (ignorance, karmic seeds, conventional perception of the world...) are not one-to-one translations of modern psychological terms. These are two systems of knowledge born thousands of years apart, with two different aims — one describes behavior, the other points to the path of liberation.</p>\n</div>\n"}}, {"id": "part1", "title": {"vi": "Phần 1 — Những khái niệm cần phân biệt trước khi đi sâu", "en": "Part 1 — Distinctions to Make Before Going Further"}, "html": {"vi": "<p>Không phải mọi tập hợp người đều là 'đám đông' hay 'quần chúng'. Một đoàn sinh sinh hoạt trực tiếp, một nhóm chat, một buổi lễ, và công chúng đang theo dõi một vấn đề có những cơ chế ảnh hưởng hoàn toàn khác nhau. Bảng tự điển sau đây sẽ được dùng xuyên suốt tài liệu:</p><div class='table-wrap'><table class='glossary'><thead><tr><th>Khái niệm</th><th>Tiếng Anh</th><th>Hiểu đơn giản</th></tr></thead><tbody><tr><td data-label='Khái niệm'><strong>Tâm lý quần chúng</strong></td><td data-label='Tiếng Anh'><em>mass psychology</em></td><td data-label='Hiểu đơn giản'>Ảnh hưởng tâm lý trong số đông xã hội nói chung, kể cả qua truyền thông.</td></tr><tr><td data-label='Khái niệm'><strong>Tâm lý đám đông</strong></td><td data-label='Tiếng Anh'><em>crowd psychology</em></td><td data-label='Hiểu đơn giản'>Tâm lý của một đám đông cụ thể, đang cùng có mặt hoặc tương tác trực tiếp trong một tình huống.</td></tr><tr><td data-label='Khái niệm'><strong>Đám đông</strong></td><td data-label='Tiếng Anh'><em>crowd</em></td><td data-label='Hiểu đơn giản'>Nhiều người ở cùng một nơi / cùng tham gia một sự kiện — không phải tên gọi chung cho mọi tập thể.</td></tr><tr><td data-label='Khái niệm'><strong>Quần chúng / Số đông</strong></td><td data-label='Tiếng Anh'><em>masses</em></td><td data-label='Hiểu đơn giản'>Số đông trong xã hội, có thể không hề gặp nhau trực tiếp.</td></tr><tr><td data-label='Khái niệm'><strong>Công chúng</strong></td><td data-label='Tiếng Anh'><em>public</em></td><td data-label='Hiểu đơn giản'>Những người cùng quan tâm một vấn đề, dù đang ở nhiều nơi khác nhau.</td></tr><tr><td data-label='Khái niệm'><strong>Dư luận</strong></td><td data-label='Tiếng Anh'><em>public opinion</em></td><td data-label='Hiểu đơn giản'>Ý kiến đang lan truyền trong công chúng. Đông người nói không có nghĩa đó là sự thật.</td></tr><tr><td data-label='Khái niệm'><strong>Chuẩn mực nhóm</strong></td><td data-label='Tiếng Anh'><em>group norms</em></td><td data-label='Hiểu đơn giản'>Điều mà thành viên hiểu ngầm là nhóm mình \"nên\" hay \"không nên\" làm.</td></tr><tr><td data-label='Khái niệm'><strong>Tuân thủ / Áp lực đồng thuận</strong></td><td data-label='Tiếng Anh'><em>conformity</em></td><td data-label='Hiểu đơn giản'>Thay đổi lời nói, hành động cho giống số đông — dù trong lòng chưa chắc đã đồng ý.</td></tr><tr><td data-label='Khái niệm'><strong>Tư duy nhóm</strong></td><td data-label='Tiếng Anh'><em>groupthink</em></td><td data-label='Hiểu đơn giản'>Cả nhóm quá muốn giữ sự nhất trí, hòa khí, nên lờ đi rủi ro hoặc ý kiến trái chiều.</td></tr><tr><td data-label='Khái niệm'><strong>Giảm cá thể hóa</strong></td><td data-label='Tiếng Anh'><em>deindividuation</em></td><td data-label='Hiểu đơn giản'>Cảm giác \"vô danh\" khi ở giữa đám đông — không có nghĩa là tự động mất lý trí hay hết trách nhiệm.</td></tr><tr><td data-label='Khái niệm'><strong>Căn tính xã hội</strong></td><td data-label='Tiếng Anh'><em>social identity</em></td><td data-label='Hiểu đơn giản'>Phần bản thân bạn tự định nghĩa qua việc \"thuộc về\" một nhóm (vd: \"tôi là Huynh trưởng của GĐPT\").</td></tr></tbody></table></div>", "en": "<p>Not every gathering of people is a \"crowd\" or \"the masses.\" Members meeting in person, a chat group, a ceremony, and the public following an issue each involve entirely different mechanisms of influence. The glossary below will be used throughout the document:</p><div class='table-wrap'><table class='glossary'><thead><tr><th>Concept</th><th>English</th><th>In plain terms</th></tr></thead><tbody><tr><td data-label='Concept'><strong>Tâm lý quần chúng</strong></td><td data-label='English'><em>mass psychology</em></td><td data-label='In plain terms'>Psychological influence across society at large, including through the media.</td></tr><tr><td data-label='Concept'><strong>Tâm lý đám đông</strong></td><td data-label='English'><em>crowd psychology</em></td><td data-label='In plain terms'>The psychology of a specific crowd, physically present or interacting directly in a given situation.</td></tr><tr><td data-label='Concept'><strong>Đám đông</strong></td><td data-label='English'><em>crowd</em></td><td data-label='In plain terms'>Many people in the same place / taking part in the same event — not a blanket term for every group.</td></tr><tr><td data-label='Concept'><strong>Quần chúng / Số đông</strong></td><td data-label='English'><em>masses</em></td><td data-label='In plain terms'>The many in society, who may never meet one another directly.</td></tr><tr><td data-label='Concept'><strong>Công chúng</strong></td><td data-label='English'><em>public</em></td><td data-label='In plain terms'>People who share concern for an issue, even while scattered in different places.</td></tr><tr><td data-label='Concept'><strong>Dư luận</strong></td><td data-label='English'><em>public opinion</em></td><td data-label='In plain terms'>Opinion circulating through the public. That many people say something does not make it true.</td></tr><tr><td data-label='Concept'><strong>Chuẩn mực nhóm</strong></td><td data-label='English'><em>group norms</em></td><td data-label='In plain terms'>What members implicitly understand their group \"should\" or \"should not\" do.</td></tr><tr><td data-label='Concept'><strong>Tuân thủ / Áp lực đồng thuận</strong></td><td data-label='English'><em>conformity</em></td><td data-label='In plain terms'>Changing one's words or actions to match the majority — even without genuine inner agreement.</td></tr><tr><td data-label='Concept'><strong>Tư duy nhóm</strong></td><td data-label='English'><em>groupthink</em></td><td data-label='In plain terms'>A group's excessive desire for consensus and harmony leads it to ignore risk or dissenting views.</td></tr><tr><td data-label='Concept'><strong>Giảm cá thể hóa</strong></td><td data-label='English'><em>deindividuation</em></td><td data-label='In plain terms'>The feeling of \"anonymity\" within a crowd — this does not automatically mean losing reason or responsibility.</td></tr><tr><td data-label='Concept'><strong>Căn tính xã hội</strong></td><td data-label='English'><em>social identity</em></td><td data-label='In plain terms'>The part of yourself you define through \"belonging\" to a group (e.g., \"I am a Huynh trưởng of the GĐPT\").</td></tr></tbody></table></div>"}}, {"id": "part2", "title": {"vi": "Phần 2 — Các nhà tư tưởng đã nói gì về tâm lý đám đông", "en": "Part 2 — What Thinkers Have Said About Crowd Psychology"}, "html": {"vi": "\n<p>Mỗi lý thuyết dưới đây chỉ nhìn thấy một phần của sự thật — vì vậy mỗi mục đều có một dòng \"cần phê phán / giới hạn\" đi kèm. Không có lý thuyết nào ở đây là chân lý tuyệt đối.</p>\n\n<div id=\"__TIMELINE__\"></div>\n\n<div class=\"thinker\" id=\"th-lebon\">\n<h4>a. Gustave Le Bon <span class=\"meta\">(Pháp, 1895)</span> — <em>Đám đông dễ bị cuốn theo cảm xúc</em></h4>\n<blockquote>Trong tác phẩm <em>Psychologie des foules</em>, Le Bon cho rằng khi ở trong đám đông, cá nhân dễ bị cuốn theo cảm xúc chung; ý tưởng lan truyền nhanh qua ám thị và bắt chước hơn là qua lý lẽ.</blockquote>\n<p><strong>Trong sinh hoạt:</strong> tiếng hò reo trong một trò chơi lớn có thể leo thang thành chế nhạo một đội chỉ trong vài phút — không ai \"quyết định\" điều đó, nó cứ cuốn đi.</p>\n<p class=\"critique\"><strong>Cần phê phán:</strong> Le Bon viết dưới ảnh hưởng định kiến giới và chủng tộc của thế kỷ 19; đám đông không phải \"một cái đầu chung\" mất lý trí — trong tập thể luôn có người tỉnh táo. Không dùng luận điểm này để biện minh cho việc thao túng đám đông bằng sợ hãi hay sự xấu hổ.</p>\n</div>\n\n<div class=\"thinker\" id=\"th-tarde\">\n<h4>b. Gabriel Tarde <span class=\"meta\">(Pháp, 1890 &amp; 1901)</span> — <em>Xã hội vận hành qua bắt chước</em></h4>\n<blockquote>Tarde phân biệt hai nhịp điệu xã hội: sáng tạo (cá nhân khởi xướng cái mới) và bắt chước (đám đông làm theo). Ông cũng là người đầu tiên tách bạch \"đám đông\" (ở cùng một chỗ) với \"công chúng\" (phân tán, kết nối qua thông tin) — một phân biệt rất hữu ích trong thời đại mạng xã hội.</blockquote>\n</div>\n\n<div class=\"thinker\" id=\"th-freud\">\n<h4>c. Sigmund Freud <span class=\"meta\">(Áo, 1921)</span> — <em>Gắn bó cảm xúc với người lãnh đạo</em></h4>\n<blockquote>Trong <em>Group Psychology and the Analysis of the Ego</em>, Freud lý giải tâm lý nhóm hình thành từ sự gắn bó cảm xúc và \"đồng nhất hóa\" (identification) với người lãnh đạo hoặc một lý tưởng chung.</blockquote>\n<p><strong>Cần lưu ý:</strong> Khi một Huynh trưởng, một Anh Chị lớn được lý tưởng hóa quá mức, đoàn sinh hay các thành viên dễ có tâm lý sợ phản biện, xem câu hỏi là \"thiếu tin tưởng\".</p>\n</div>\n\n<div class=\"thinker\" id=\"th-janis\">\n<h4>d. Irving Janis <span class=\"meta\">(Mỹ, 1972)</span> — <em>Tư duy nhóm (Groupthink)</em></h4>\n<blockquote>Trong <em>Victims of Groupthink</em>, Janis mô tả hiện tượng cả nhóm quá muốn giữ sự nhất trí đến mức bỏ qua dữ kiện hay rủi ro thực tế.</blockquote>\n<p><strong>Trong sinh hoạt:</strong> tâm lý \"kính trên nhường dưới\" đôi khi khiến không ai dám nói \"kế hoạch trại này có rủi ro\" — sự im lặng đó dễ bị hiểu lầm là đồng thuận thật sự.</p>\n</div>\n\n<div class=\"thinker\" id=\"th-darley\">\n<h4>e. John Darley &amp; Bibb Latané <span class=\"meta\">(Mỹ, 1968)</span> — <em>Hiệu ứng bàng quan (Bystander Effect)</em></h4>\n<blockquote>Các thí nghiệm kinh điển về can thiệp của người chứng kiến cho thấy sự hiện diện của người khác có thể ảnh hưởng đến nhận thức trách nhiệm và khả năng can thiệp. Vì vậy \"đông người\" không đồng nghĩa có nhiều hành động giúp đỡ, bởi mỗi cá nhân thường sẽ nghĩ \"chắc người khác sẽ làm\".</blockquote>\n<p><strong>Ứng dụng trực tiếp:</strong> Khi điều phối trại hay công tác, đừng bao giờ kêu gọi chung chung (\"ai đó dọn giúp\"). Luôn phân định rõ ai thực hiện, ai là người có trách nhiệm chính.</p>\n</div>\n\n<div class=\"thinker\" id=\"th-tajfel\">\n<h4>f. Henri Tajfel &amp; John Turner <span class=\"meta\">(Anh, 1979/1986)</span> — <em>Lý thuyết Căn tính Xã hội (Social Identity Theory)</em></h4>\n<blockquote>Khi tự nhận mình \"thuộc về\" một nhóm, con người có xu hướng thiên vị nhóm mình và định kiến với nhóm khác (ingroup favoritism).</blockquote>\n<p><strong>Ứng dụng:</strong> để tránh các Đội/Chúng ganh tị cục bộ, đừng cố xóa bỏ căn tính đội — thay vào đó, liên tục tạo ra mục tiêu chung lớn hơn (superordinate goals) buộc các đội phải tạm gác ranh giới để hợp tác, đồng thời vẫn khuyến khích tinh thần đồng đội và cạnh tranh lành mạnh.</p>\n</div>\n\n<div class=\"thinker\" id=\"th-esim\">\n<h4>g. Stephen Reicher, John Drury &amp; Clifford Stott <span class=\"meta\">(Anh, từ năm 1996 đến nay)</span> — <em>Mô hình Căn tính Xã hội Mở rộng (ESIM)</em></h4>\n<blockquote>Đám đông không phải một khối cuồng loạn mất kiểm soát — họ vận hành theo chuẩn mực có ý nghĩa từ góc nhìn của chính họ; Trong một số xung đột, cách người có thẩm quyền giao tiếp, quy kết hay đối xử với cả một nhóm có thể làm thay đổi quan hệ liên nhóm và gia tăng căng thẳng.</blockquote>\n<p><strong>Ứng dụng:</strong> khi có xung đột, người điều hành cần có thái độ rõ ràng, công bằng, giải thích rõ lý do hành động - không đẩy đội/nhóm vào thế đối đầu hay khiến thành viên cảm thấy bị tổn thương.</p>\n</div>\n", "en": "\n<p>Each theory below sees only part of the truth — so every entry comes with a line of \"critique / limitation.\" None of these theories is presented here as absolute truth.</p>\n\n<div id=\"__TIMELINE__\"></div>\n\n<div class=\"thinker\" id=\"th-lebon\">\n<h4>a. Gustave Le Bon <span class=\"meta\">(France, 1895)</span> — <em>Crowds are easily swept up by emotion</em></h4>\n<blockquote>In his work <em>Psychologie des foules</em> (The Crowd), Le Bon argued that within a crowd, individuals are easily carried along by a shared emotion; ideas spread rapidly through suggestion and imitation rather than through reasoning.</blockquote>\n<p><strong>In practice:</strong> cheering during a large group game can escalate into mocking a team within minutes — no one \"decides\" this; it simply sweeps everyone along.</p>\n<p class=\"critique\"><strong>A needed critique:</strong> Le Bon wrote under the influence of nineteenth-century prejudices about gender and race; a crowd is not \"a single collective mind\" that has lost its reason — within any group there are always people who remain clear-headed. This point should never be used to justify manipulating a crowd through fear or shame.</p>\n</div>\n\n<div class=\"thinker\" id=\"th-tarde\">\n<h4>b. Gabriel Tarde <span class=\"meta\">(France, 1890 &amp; 1901)</span> — <em>Society operates through imitation</em></h4>\n<blockquote>Tarde distinguished two social rhythms: invention (individuals initiating something new) and imitation (the crowd following suit). He was also the first to separate the \"crowd\" (physically co-located) from the \"public\" (dispersed, connected through information) — a distinction that is especially useful in the age of social media.</blockquote>\n</div>\n\n<div class=\"thinker\" id=\"th-freud\">\n<h4>c. Sigmund Freud <span class=\"meta\">(Austria, 1921)</span> — <em>Emotional attachment to the leader</em></h4>\n<blockquote>In <em>Group Psychology and the Analysis of the Ego</em>, Freud explained that group psychology forms through emotional attachment and \"identification\" with a leader or a shared ideal.</blockquote>\n<p><strong>Worth noting:</strong> when a Huynh trưởng or a senior member is idealized too much, members can become afraid to disagree, treating questions as a sign of \"lacking trust.\"</p>\n</div>\n\n<div class=\"thinker\" id=\"th-janis\">\n<h4>d. Irving Janis <span class=\"meta\">(United States, 1972)</span> — <em>Groupthink</em></h4>\n<blockquote>In <em>Victims of Groupthink</em>, Janis described the phenomenon in which a group's desire for consensus grows so strong that it overlooks facts or real risks.</blockquote>\n<p><strong>In practice:</strong> a culture of \"Respect your elders and make way for the youth\" can sometimes mean no one dares say \"this camp plan carries risk\" — and that silence can easily be mistaken for genuine agreement.</p>\n</div>\n\n<div class=\"thinker\" id=\"th-darley\">\n<h4>e. John Darley &amp; Bibb Latané <span class=\"meta\">(United States, 1968)</span> — <em>The Bystander Effect</em></h4>\n<blockquote>Their classic experiments on bystander intervention showed that the presence of others can affect a person's sense of responsibility and willingness to act. A larger crowd, therefore, does not necessarily mean more helping behavior — each individual tends to think, \"surely someone else will do it.\"</blockquote>\n<p><strong>Direct application:</strong> when coordinating a camp or a task, never issue a vague call to action (\"could someone please clean up\"). Always assign clearly who is responsible and who carries the main duty.</p>\n</div>\n\n<div class=\"thinker\" id=\"th-tajfel\">\n<h4>f. Henri Tajfel &amp; John Turner <span class=\"meta\">(United Kingdom, 1979/1986)</span> — <em>Social Identity Theory</em></h4>\n<blockquote>Once people identify as \"belonging\" to a group, they tend to favor their own group and hold biases against other groups (ingroup favoritism).</blockquote>\n<p><strong>Application:</strong> to prevent rivalry between teams or units, don't try to erase team identity — instead, continually create larger shared goals (superordinate goals) that require the teams to set aside their boundaries in order to cooperate, while still encouraging team spirit and healthy competition.</p>\n</div>\n\n<div class=\"thinker\" id=\"th-esim\">\n<h4>g. Stephen Reicher, John Drury &amp; Clifford Stott <span class=\"meta\">(United Kingdom, from 1996 to the present)</span> — <em>The Elaborated Social Identity Model (ESIM)</em></h4>\n<blockquote>A crowd is not a single irrational mass out of control — it operates according to norms that are meaningful from its own point of view. In certain conflicts, the way an authority figure communicates with, attributes motives to, or treats an entire group can reshape intergroup relations and heighten tension.</blockquote>\n<p><strong>Application:</strong> in a conflict, those in charge need a clear, fair attitude and should explain the reasons for their actions clearly — rather than pushing a team or group into confrontation or making members feel hurt.</p>\n</div>\n"}}, {"id": "part3", "title": {"vi": "Phần 3 — Từ tâm lý học đến tuệ giác đạo Phật", "en": "Part 3 — From Psychology to Buddhist Insight"}, "html": {"vi": "<p>Khoa học hành vi xem tâm lý quần chúng là một cấu trúc <strong>tâm thức tập thể</strong> — cách mà cả một cộng đồng cùng vận hành, tiếp nhận và phản ứng trước các luồng thông tin. Ở chiều sâu tâm linh, Đức Phật chính là bậc thầy đã thấu hiểu cơ chế ấy để hóa độ — như một lương y hiểu rõ căn bệnh của chúng sanh để kê đúng liều thuốc giáo pháp, giúp con người chuyển từ phàm phu vô minh sang tỉnh thức và tự chủ.</p><div class=\"mini-acc\" data-mid=\"sub1\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">1. Phân tích cấu trúc tâm lý đám đông</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p>Khi quan sát các hiện tượng tâm lý đám đông hiện đại dưới lăng kính kinh điển Phật giáo, ta có thể nhận diện được ba cơ chế cốt lõi:</p><div class=\"mini-acc\" data-mid=\"sub1a\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">Vô minh cộng hưởng (saṅkhāra)</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p><strong>Vô minh (<em>avijjā</em>) cộng hưởng thành dòng chảy Hành uẩn<button class=\"fn-ref\" data-fn=\"1\" aria-label=\"Footnote 1\">1</button> (<em>saṅkhāra</em>):</strong> Khi một đám đông cùng khởi lên các cảm xúc gốc từ tham, sân hay si, những hạt giống này cộng hưởng thành một trường năng lượng tập thể, tạo nên một dòng chảy (<em>bộc lưu</em>) đủ sức cuốn phăng khả năng suy xét độc lập và sự tự chủ của từng cá nhân. <strong>Trong sinh hoạt:</strong> đây là lúc một trò chơi lớn có thể đột ngột chuyển từ vui nhộn sang hỗn loạn — không phải vì một quyết định của ai, mà vì nhiều người cùng lúc bị cuốn theo một cảm xúc chung.</p></div></div>\n</div><div class=\"mini-acc\" data-mid=\"sub1b\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">Áp lực quy ước & sợ dư luận</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p><strong>Áp lực quy ước (<em>loka-samaññā</em>) và nỗi sợ dư luận (<em>parisā-sārajja</em>):</strong> đám đông tự tạo ra những \"quy ước thế gian\" — nhãn dán, chuẩn mực, trào lưu — và cá nhân thường rơi vào trạng thái rụt rè, sợ hãi khi đứng trước hội chúng, dẫn đến việc không dám nói sự thật để tránh bị dị nghị, phán xét<button class=\"fn-ref\" data-fn=\"2\" aria-label=\"Footnote 2\">2</button>. <strong>Trong sinh hoạt:</strong> một đoàn sinh (hay chính Huynh trưởng) không dám nêu ý kiến khác trong buổi họp Đội vì sợ bị chê \"khác người\" — đó chính là parisā-sārajja đang vận hành.</p></div></div>\n</div><div class=\"mini-acc\" data-mid=\"sub1c\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">Áp lực bạn xấu (pāpamittatā)</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p><strong>Áp lực bạn xấu (<em>pāpamittatā</em> — ác tri giao):</strong> Trong rất nhiều trường hợp, sự sa ngã của người trẻ không đến từ bản chất, mà từ sức ép của \"ác tri giao\" — nhóm bạn xấu ép cá nhân phải tuân theo để không bị tẩy chay, cô lập. <strong>Trong sinh hoạt:</strong> một em đoàn sinh làm điều không đúng chỉ vì \"cả nhóm bạn đều làm vậy\" và sợ bị cô lập nếu từ chối — đây là biểu hiện cụ thể của áp lực \"ác tri giao\" nơi lứa tuổi thanh thiếu niên.</p></div></div>\n</div></div></div>\n</div><div class=\"mini-acc\" data-mid=\"sub2\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">2. Con đường chuyển hóa</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><div class=\"mini-acc\" data-mid=\"suba\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">a. Tỉnh thức độc lập — nghệ thuật \"đi ngược dòng\"</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><div class=\"mini-acc\" data-mid=\"suba1\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">Kinh Kālāma — tiêu chí kiểm chứng</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p><strong>Kinh Kālāma</strong> (<em>Kālāma Sutta</em>, Tăng Chi Bộ — Aṅguttara Nikāya 3.65): khi dân làng Kālāma hoang mang trước nhiều luồng tư tưởng tranh chấp, Đức Phật dạy: đừng vội tin chỉ vì đó là truyền thống lâu đời, được đồn đại rộng rãi, hay vì nể uy tín người nói — hãy tự mình kiểm chứng qua trải nghiệm thực tế. Ngài đưa ra một tiêu chí cụ thể: nếu điều gì khi thực hành sẽ dẫn đến hại mình, hại người, gây hậu quả khổ đau và bị người có trí tuệ chê trách, hãy tự biết đó là điều bất thiện.</p></div></div>\n</div><div class=\"mini-acc\" data-mid=\"suba2\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">Người đi ngược dòng</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p><strong>Người đi ngược dòng</strong> (Tăng Chi Bộ — Aṅguttara Nikāya 4.5, Kinh bốn hạng người): kinh này mô tả bốn hạng người; trong đó người \"đi ngược dòng\" là người dám sống đúng giá trị của mình dù phải chịu cô đơn, thậm chí đau khổ tạm thời — thay vì buông mình theo dòng chảy dễ dãi của số đông. Nhưng \"ngược dòng\" không có nghĩa tự cô lập, chống lại cộng đồng hoặc tự cho mình cao hơn người khác. Đó là giữ giới hạn đạo đức, đồng thời tìm cách hành xử với từ bi và trách nhiệm.</p></div></div>\n</div><div class=\"mini-acc\" data-mid=\"suba3\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">Thiện hữu tri thức</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p><strong>Thiện hữu tri thức</strong> (Tương Ưng Bộ — Kinh Thiện Hữu và đời sống phạm hạnh, Saṃyutta Nikāya 45.2): Phật giáo không xem \"tính bầy đàn\" là tiêu cực mà định hình lại nó thông qua \"Thiện tri giao\". Khi được hỏi liệu tình bạn tốt có phải là \"một nửa\" đời sống phạm hạnh không, Đức Phật trả lời: đó là toàn bộ đời sống phạm hạnh. Một môi trường tập thể với chuẩn mực đạo đức cao có khả năng chuyển áp lực đồng thuận thành mạng lưới nâng đỡ nhau cùng tiến bộ.</p></div></div>\n</div><div class=\"mini-acc\" data-mid=\"suba4\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">Ứng xử khi bị vu khống</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p><strong>Ứng xử khi bị vu khống</strong> (Trung Bộ Kinh — Majjhima Nikāya 12): khi đệ tử Sunakkhatta rời tăng đoàn và đi khắp nơi phỉ báng rằng giáo pháp của Ngài không có gì đặc biệt, Đức Phật vẫn giữ điềm tĩnh, an trú vào giá trị của con đường mình đi. Một chỉ dẫn thiết thực cho người trẻ làm Huynh trưởng thời mạng xã hội: bị hiểu lầm hay bị nói xấu không đồng nghĩa với việc phải phản ứng ngay lập tức.</p></div></div>\n</div></div></div>\n</div><div class=\"mini-acc\" data-mid=\"subb\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">b. Dấn thân giữa đời mà không bị cuốn trôi</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p>Giáo Pháp của Đức Phật chỉ ra phương pháp giữ tâm không bị cuốn vào cảm xúc của số đông, đồng thời khuyến khích một hành giả không sợ hãi hay tách mình cô lập khỏi đám đông ấy. Người Huynh trưởng nhìn thấu rằng các cảm xúc, sự hùa theo hay hỗn loạn của đám đông thực chất chỉ là hiện tượng <em>duyên sinh</em> — nó được cấu thành từ những nỗi sợ vô thức, sự thiếu thông tin và những hạt giống chủng tử tiêu cực<button class=\"fn-ref\" data-fn=\"3\" aria-label=\"Footnote 3\">3</button> được kích hoạt cùng lúc. Do vậy người Huynh trưởng không e ngại khi bước vào đám đông để thực hành và sinh hoạt.</p>\n<blockquote>\n<p><strong>Nghệ thuật chuyển hóa từ bên trong (Tứ nhiếp pháp)<button class=\"fn-ref\" data-fn=\"4\" aria-label=\"Footnote 4\">4</button>:</strong> Trong khi dấn thân, Huynh trưởng thực hành <em>Tứ nhiếp pháp với hành động cụ thể: Bố thí, Ái ngữ, lợi hành, đồng sự.</em> Bằng sự hiện diện kiên nhẫn và đồng cảm, bằng ái ngữ và lắng nghe, một người thực hành Tứ nhiếp pháp có khả năng chuyển hóa năng lượng tiêu cực của đám đông từ gốc rễ mà không cần dùng đến mệnh lệnh áp đặt.</p>\n<p>Đây chính là con đường và cách hành xử của một vị Bồ tát theo tinh thần Đại thừa: \"hòa mình vào quần chúng\", hoàn toàn khác với tâm lý hùa theo của số đông. Bồ-tát bước vào giữa đám đông vô minh, vững vàng trước áp lực của số đông, dùng <strong>Bi - Trí - Dũng</strong> để chuyển hóa năng lượng tiêu cực ấy thành lòng từ bi và giác ngộ.</p>\n<p><strong>Nghệ thuật chung sống hài hòa (Lục Hòa)<button class=\"fn-ref\" data-fn=\"5\" aria-label=\"Footnote 5\">5</button>:</strong> Đức Phật cũng đưa ra sáu nguyên tắc để giúp cho các thành viên của một tập thể có thể cùng nhau chung sống hài hòa mà vẫn giữ được sự khác biệt cá thể. Khi được vận dụng khéo léo trong đời sống tập thể hiện đại, Lục hòa chính là mạng lưới đề kháng giúp hóa giải các cơ chế tiêu cực của tâm lý đám đông từ bên trong:</p>\n</blockquote>\n<ul>\n<li>Sự chia sẻ góc nhìn (<strong>Kiến hòa đồng giải</strong>) bảo vệ cá nhân khỏi sự thao túng của tư duy bầy đàn (Groupthink);</li>\n<li>Sự cẩn trọng trong lời nói (<strong>Khẩu hòa vô tránh</strong>) cắt đứt sự lây lan của tin đồn và cảm xúc cuồng nộ;</li>\n<li>Chuẩn mực kỷ luật chung (<strong>Giới hòa đồng tu</strong>) giữ cho tập thể không rơi vào trạng thái mất kiểm soát hay vô trách nhiệm;</li>\n<li>Sự đồng điệu tâm ý, hiện diện cùng nhau và chia sẻ công bằng (<strong>Ý hòa đồng duyệt, Thân hòa đồng trú, Lợi hòa đồng quân</strong>) chuyển hóa tận gốc tâm lý chia phe, đố kỵ và hoảng loạn.</li>\n</ul></div></div>\n</div></div></div>\n</div>", "en": "<p>Behavioral science views mass psychology as a structure of <strong>collective consciousness</strong> — the way an entire community operates, receives, and reacts to streams of information. At the level of spiritual depth, the Buddha himself is the teacher who fully understood this mechanism in order to guide beings — like a skilled physician who understands the illness of sentient beings well enough to prescribe the right dose of Dharma, helping people move from unenlightened, ordinary beings toward awakening and self-mastery.</p><div class=\"mini-acc\" data-mid=\"sub1\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">1. Analyzing the structure of crowd psychology</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p>Viewing modern crowd-psychology phenomena through the lens of Buddhist scripture, we can identify three core mechanisms:</p><div class=\"mini-acc\" data-mid=\"sub1a\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">Ignorance resonating (saṅkhāra)</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p><strong>The resonance of Ignorance (<em>avijjā</em>) into a torrent of Mental Formations (<em>saṅkhāra</em>)<button class=\"fn-ref\" data-fn=\"1\" aria-label=\"Footnote 1\">1</button>:</strong> When a crowd collectively gives rise to core emotions rooted in greed, aversion, or delusion, these dormant seeds resonate into a collective energy field. This creates a psychological torrent (<em>ogha</em>) powerful enough to sweep away the independent reasoning and self-autonomy of each individual. <strong>In practice:</strong> this is the moment a large group game can suddenly turn from joyful to chaotic — not because of any one person's decision, but because many people are simultaneously swept up in a shared emotion.</p></div></div>\n</div><div class=\"mini-acc\" data-mid=\"sub1b\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">Worldly convention & fear of the assembly</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p><strong>Pressure from worldly convention (<em>loka-samaññā</em>) and fear of the assembly (<em>parisā-sārajja</em>):</strong> a crowd creates its own \"worldly conventions\" — labels, standards, trends — and individuals often fall into timidity and fear when facing the group, leading them not to dare speak the truth for fear of being criticized or judged<button class=\"fn-ref\" data-fn=\"2\" aria-label=\"Footnote 2\">2</button>. <strong>In practice:</strong> a member — or even a Huynh trưởng — who doesn't dare voice a different opinion in a team meeting for fear of being called \"different\" is experiencing <em>parisā-sārajja</em> at work.</p></div></div>\n</div><div class=\"mini-acc\" data-mid=\"sub1c\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">Bad company (pāpamittatā)</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p><strong>Pressure from bad company (<em>pāpamittatā</em>):</strong> in many cases, a young person's fall from the right path comes not from their own nature but from the pressure of \"association with bad friends\" — a group of bad companions pressuring the individual to conform so as not to be shunned or isolated. <strong>In practice:</strong> a member doing something wrong simply because \"the whole group does it,\" out of fear of being isolated for refusing — this is a concrete expression of <em>pāpamittatā</em> pressure among youth.</p></div></div>\n</div></div></div>\n</div><div class=\"mini-acc\" data-mid=\"sub2\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">2. The path of transformation</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><div class=\"mini-acc\" data-mid=\"suba\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">a. Independent awakening — the art of \"going against the stream\"</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><div class=\"mini-acc\" data-mid=\"suba1\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">The Kālāma Sutta — criteria</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p><strong>The Kālāma Sutta</strong> (Aṅguttara Nikāya 3.65): when the people of Kālāma were confused by many competing schools of thought, the Buddha taught: do not believe something simply because it is long-standing tradition, widely rumored, or because of the speaker's reputation — verify it for yourself through direct experience. He offered a concrete criterion: if something, when practiced, leads to harm for oneself or others, causes suffering, and is criticized by the wise, know for yourself that it is unwholesome.</p></div></div>\n</div><div class=\"mini-acc\" data-mid=\"suba2\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">Going against the stream</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p><strong>The One Who Goes Against the Stream</strong> (Aṅguttara Nikāya 4.5, the Sutta of the Four Kinds of Persons): this sutta describes four kinds of people; among them, the one who \"goes against the stream\" dares to live according to their own values even at the cost of loneliness or temporary suffering, rather than drifting along with the easy current of the majority. But \"going against the stream\" does not mean isolating oneself, opposing the community, or considering oneself above others. It means holding to ethical boundaries while still finding ways to act with compassion and responsibility.</p></div></div>\n</div><div class=\"mini-acc\" data-mid=\"suba3\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">Good companionship</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p><strong>Good companionship</strong> (Saṃyutta Nikāya 45.2, the Sutta on Good Friends and the Holy Life / Upaddha Sutta): Buddhism does not regard \"herd tendencies\" as inherently negative, but reshapes them through \"good friendship.\" When asked whether good friendship is \"half\" of the holy life, the Buddha replied that it is the entire holy life. A collective environment with high ethical standards has the power to turn conformity pressure into a network that supports mutual progress.</p></div></div>\n</div><div class=\"mini-acc\" data-mid=\"suba4\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">How to respond when slandered</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p><strong>How to respond when slandered</strong> (Majjhima Nikāya 12): when the disciple Sunakkhatta left the Saṅgha and went about denouncing the Buddha's teaching as nothing special, the Buddha remained calm, resting securely in the value of his own path. A practical lesson for young Huynh trưởng in the age of social media: being misunderstood or spoken ill of does not mean one must react immediately.</p></div></div>\n</div></div></div>\n</div><div class=\"mini-acc\" data-mid=\"subb\">\n<button class=\"mini-head\" onclick=\"toggleMini(this)\">\n  <span class=\"mini-title\">b. Engaging with the world without being swept away</span>\n  <svg class=\"mini-chev\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n</button>\n<div class=\"mini-body\"><div class=\"mini-body-inner\"><p>The Buddha's teaching offers a way to keep the mind from being carried away by the emotions of the crowd, while also encouraging a practitioner not to fear or isolate themselves from that crowd. A Huynh trưởng who sees clearly understands that a crowd's emotions, herd behavior, or chaos are, in truth, merely <em>dependently arisen</em> phenomena — composed of unconscious fears, lack of information, and negative karmic seeds<button class=\"fn-ref\" data-fn=\"3\" aria-label=\"Footnote 3\">3</button> activated all at once. For this reason, the Huynh trưởng need not hesitate to step into the crowd in order to practice and take part in communal life.</p>\n<blockquote>\n<p><strong>The art of transformation from within (the Four Saṅgahavatthu)<button class=\"fn-ref\" data-fn=\"4\" aria-label=\"Footnote 4\">4</button>:</strong> while engaged with others, the Huynh trưởng practices the <em>Four Saṅgahavatthu through concrete action: generosity, kind speech, beneficial conduct, and consistency/impartiality.</em> Through patient, empathetic presence, through kind speech and listening, a practitioner of the Four Saṅgahavatthu can transform a crowd's negative energy at its root, without resorting to commands or coercion.</p>\n<p>This is precisely the path and conduct of a Bodhisattva in the Mahāyāna spirit: \"merging with the masses\" — something entirely different from being swept along by the crowd's psychology. The Bodhisattva steps into the midst of an unenlightened crowd, standing firm against its pressure, using <strong>Compassion, Wisdom, and Courage</strong> to transform that negative energy into loving-kindness and awakening.</p>\n<p><strong>The art of harmonious living (the Six Harmonies)<button class=\"fn-ref\" data-fn=\"5\" aria-label=\"Footnote 5\">5</button>:</strong> the Buddha also gave six principles to help members of a community live together in harmony while still preserving individual differences. Skillfully applied to modern communal life, the Six Harmonies form a network of resilience that can dissolve the negative mechanisms of crowd psychology from within:</p>\n</blockquote>\n<ul>\n<li>Sharing perspectives (<strong>Harmony in View</strong>) protects the individual from being manipulated by groupthink;</li>\n<li>Care in speech (<strong>Harmony in Speech, free of contention</strong>) cuts off the spread of rumor and inflamed emotion;</li>\n<li>Shared standards of discipline (<strong>Harmony in Precepts</strong>) keep the community from falling into a state of loss of control or irresponsibility;</li>\n<li>Unity of mind, shared presence, and fair sharing (<strong>Harmony in Mind, Harmony in Body, Harmony in Benefits</strong>) transform, at the root, the psychology of factionalism, jealousy, and panic.</li>\n</ul></div></div>\n</div></div></div>\n</div>"}}, {"id": "part4", "title": {"vi": "Phần 4 — Ứng dụng thực tiễn cho Huynh trưởng", "en": "Part 4 — Practical Applications for Huynh Trưởng"}, "html": {"vi": "\n<p><strong>Trong hoạt động tập thể (trại, trò chơi lớn, lễ hội):</strong> cảm xúc chung dâng lên rất nhanh. Hãy quan sát các tín hiệu sớm: tiếng hò reo leo thang, thái độ chế nhạo, chia phe, tin đồn chưa kiểm chứng. Khi thấy dấu hiệu này, hãy chủ động tạo \"khoảng dừng\": nhắc lại mục tiêu, kiểm tra an toàn, chia việc rõ ràng, và hỏi thẳng \"có ai nghĩ khác không?\"</p>\n<p><strong>Khi tiếp nhận thông tin, dư luận, trào lưu:</strong> trước khi làm theo điều gì đó vì \"ai cũng làm\", hãy tự hỏi ba câu theo tinh thần Kālāma: Nguồn tin từ đâu? Bằng chứng là gì? Điều này có lợi ích thật sự không? Hướng sự bắt chước của đoàn sinh vào các hình mẫu lành mạnh như: trung thực, giúp đỡ, kiên trì.</p>\n<p><strong>Trong các mối quan hệ:</strong> kính trọng bậc trưởng thượng và Anh Chị Huynh trưởng lớn để nuôi dưỡng lòng biết ơn — nhưng kính trọng không có nghĩa là tin mù quáng. Huynh trưởng không kiếm sự trung thành cá nhân từ đoàn sinh; hãy giúp các em tin vào giá trị chung: chân thật, bất hại, trách nhiệm, tình thương.</p>\n<p><strong>Trong hội họp, sinh hoạt Đội, Chúng, Đoàn:</strong> bốn thực hành cụ thể dưới đây.</p>\n<ul>\n<li>Chủ động mời gọi ý kiến trái chiều, đặc biệt từ thành viên trẻ hoặc ít nói.</li>\n<li>Với quyết định lớn, chỉ định một người đóng vai \"người phản biện\" (Challenger) để tìm lỗ hổng rủi ro trước khi chốt.</li>\n<li>Hướng năng lượng tập thể vào chuẩn mực lành mạnh (\"Đội mình thi đấu trung thực\", \"Đội mình không bỏ rơi người chậm\").</li>\n<li>Tạo dự án chung giữa nhiều đội/chúng để giảm tâm lý thiên vị cục bộ.</li>\n</ul>\n", "en": "\n<p><strong>In group activities (camps, large games, festivals):</strong> shared emotion can rise very quickly. Watch for early signs: escalating cheers, mockery, factions forming, unverified rumors. When you notice these signs, actively create a \"pause\": restate the goal, check for safety, assign tasks clearly, and ask directly, \"does anyone see this differently?\"</p>\n<p><strong>When receiving information, public opinion, or trends:</strong> before following something simply because \"everyone does it,\" ask yourself three questions in the spirit of the Kālāma Sutta: Where does this information come from? What is the evidence? Is there genuine benefit here? Direct members' natural tendency to imitate toward healthy models: honesty, helpfulness, perseverance.</p>\n<p><strong>In relationships:</strong> respect elders and senior Huynh trưởng to nurture gratitude — but respect does not mean blind belief. A Huynh trưởng should not seek personal loyalty from members; instead, help them believe in shared values: truthfulness, non-harming, responsibility, love.</p>\n<p><strong>In meetings and team, group, or troop activities:</strong> four concrete practices below.</p>\n<ul>\n<li>Actively invite dissenting opinions, especially from younger or quieter members.</li>\n<li>For major decisions, appoint someone to play the role of \"Challenger\" to look for weaknesses and risks before finalizing.</li>\n<li>Direct the group's collective energy toward healthy norms (\"our team competes honestly,\" \"our team doesn't leave anyone behind\").</li>\n<li>Create shared projects across multiple teams or groups to reduce local favoritism.</li>\n</ul>\n"}}, {"id": "conclusion", "title": {"vi": "Kết luận", "en": "Conclusion"}, "html": {"vi": "\n<p>Tâm lý tập thể có hai khả năng. Nó có thể khiến tin đồn, sợ hãi, chế nhạo và áp lực đồng thuận lan nhanh. Nhưng nó cũng có thể lan tỏa sự bình tĩnh, lòng can đảm, tinh thần phục vụ và niềm vui trước điều lành của người khác.</p>\n<p>Nhiệm vụ của Huynh trưởng không phải là \"nắm quần chúng\". Huynh trưởng vừa là người anh, người chị, người đồng hành giúp đoàn sinh biết suy nghĩ độc lập trong tương quan, biết hợp tác mà không phục tùng mù quáng, biết bảo vệ người khác, và biết dùng thân — khẩu — ý để làm giảm khổ đau của chính mình, góp phần làm tốt đẹp môi trường xung quanh. Một tập thể như vậy không cần sự đồng nhất mà cần sự chân thật, công bằng, có tình thương và sự thấu hiểu, có khả năng cùng nhau học hỏi và chuyển hóa.</p>\n", "en": "\n<p>Collective psychology holds two possibilities. It can spread rumor, fear, mockery, and conformity pressure quickly. But it can just as easily spread calm, courage, a spirit of service, and joy at the good fortune of others.</p>\n<p>The task of a Huynh trưởng is not to \"control the masses.\" A Huynh trưởng is at once an elder brother or sister and a companion who helps members learn to think independently within relationships, to cooperate without blind obedience, to protect others, and to use body, speech, and mind to reduce their own suffering while helping to improve the world around them. Such a community does not need uniformity — it needs honesty, fairness, love, and the capacity to learn and transform together.</p>\n"}}, {"id": "references", "title": {"vi": "Tài liệu tham khảo", "en": "References"}, "html": {"vi": "\n<h5>Nguồn học thuật phương Tây</h5>\n<ul class=\"refs\">\n<li>Le Bon, G. (1895). <em>Psychologie des foules</em>.</li>\n<li>Tarde, G. (1890). <em>Les lois de l'imitation</em>; (1901) <em>L'opinion et la foule</em>.</li>\n<li>Freud, S. (1921). <em>Group Psychology and the Analysis of the Ego</em>.</li>\n<li>Janis, I. L. (1972). <em>Victims of Groupthink</em>.</li>\n<li>Darley, J. M., &amp; Latané, B. (1968). Bystander intervention in emergencies: diffusion of responsibility. <em>Journal of Personality and Social Psychology</em>, 8(4), 377–383.</li>\n<li>Tajfel, H., &amp; Turner, J. C. (1979/1986). An Integrative Theory of Intergroup Conflict / The Social Identity Theory of Intergroup Behavior.</li>\n<li>Reicher, S., Drury, J., &amp; Stott, C. (từ 1996 đến nay). Mô hình Căn tính Xã hội Mở rộng (Elaborated Social Identity Model, ESIM).</li>\n</ul>\n<h5>Kinh điển</h5>\n<ul class=\"refs\">\n<li>Aṅguttara Nikāya 3.65 — Kinh Kālāma (Kesamutti Sutta).</li>\n<li>Aṅguttara Nikāya 4.5 — Kinh Bốn hạng người (Anusota Sutta), Phẩm Bhaṇḍagāma, Chương Bốn Pháp.</li>\n<li>Saṃyutta Nikāya 45.2 — Kinh Thiện hữu và đời sống phạm hạnh (Upaddha Sutta).</li>\n<li>Majjhima Nikāya 12 — Đại Kinh Sư Tử Hống (Mahāsīhanāda Sutta), Trung Bộ Kinh.</li>\n<li>Dīgha Nikāya 31 — Kinh Thiện Sanh (Sigālovāda Sutta), tác hại của ác tri giao.</li>\n</ul>\n", "en": "\n<h5>Western academic sources</h5>\n<ul class=\"refs\">\n<li>Le Bon, G. (1895). <em>Psychologie des foules</em>.</li>\n<li>Tarde, G. (1890). <em>Les lois de l'imitation</em>; (1901) <em>L'opinion et la foule</em>.</li>\n<li>Freud, S. (1921). <em>Group Psychology and the Analysis of the Ego</em>.</li>\n<li>Janis, I. L. (1972). <em>Victims of Groupthink</em>.</li>\n<li>Darley, J. M., &amp; Latané, B. (1968). Bystander intervention in emergencies: diffusion of responsibility. <em>Journal of Personality and Social Psychology</em>, 8(4), 377–383.</li>\n<li>Tajfel, H., &amp; Turner, J. C. (1979/1986). An Integrative Theory of Intergroup Conflict / The Social Identity Theory of Intergroup Behavior.</li>\n<li>Reicher, S., Drury, J., &amp; Stott, C. (1996–present). The Elaborated Social Identity Model (ESIM).</li>\n</ul>\n<h5>Buddhist scriptures</h5>\n<ul class=\"refs\">\n<li>Aṅguttara Nikāya 3.65 — the Kālāma Sutta (Kesamutti Sutta).</li>\n<li>Aṅguttara Nikāya 4.5 — the Sutta of the Four Kinds of Persons (Anusota Sutta), Bhaṇḍagāma Vagga, Book of the Fours.</li>\n<li>Saṃyutta Nikāya 45.2 — the Sutta on Good Friends and the Holy Life (Upaddha Sutta).</li>\n<li>Majjhima Nikāya 12 — the Greater Discourse on the Lion's Roar (Mahāsīhanāda Sutta).</li>\n<li>Dīgha Nikāya 31 — the Sigālovāda Sutta, on the harm of bad companionship.</li>\n</ul>\n"}}], "flashcards": [{"front": {"vi": "Tâm lý quần chúng", "en": "Mass psychology"}, "back": {"vi": "Ảnh hưởng tâm lý trong số đông xã hội nói chung, kể cả qua truyền thông.", "en": "Psychological influence across society at large, including through the media."}}, {"front": {"vi": "Tâm lý đám đông", "en": "Crowd psychology"}, "back": {"vi": "Tâm lý của một đám đông cụ thể, đang cùng có mặt hoặc tương tác trực tiếp trong một tình huống.", "en": "The psychology of a specific crowd, physically present or interacting directly in a given situation."}}, {"front": {"vi": "Đám đông", "en": "Crowd"}, "back": {"vi": "Nhiều người ở cùng một nơi / cùng tham gia một sự kiện — không phải tên gọi chung cho mọi tập thể.", "en": "Many people in the same place / taking part in the same event — not a blanket term for every group."}}, {"front": {"vi": "Quần chúng / Số đông", "en": "The masses"}, "back": {"vi": "Số đông trong xã hội, có thể không hề gặp nhau trực tiếp.", "en": "The many in society, who may never meet one another directly."}}, {"front": {"vi": "Công chúng", "en": "The public"}, "back": {"vi": "Những người cùng quan tâm một vấn đề, dù đang ở nhiều nơi khác nhau.", "en": "People who share concern for an issue, even while scattered in different places."}}, {"front": {"vi": "Dư luận", "en": "Public opinion"}, "back": {"vi": "Ý kiến đang lan truyền trong công chúng. Đông người nói không có nghĩa đó là sự thật.", "en": "Opinion circulating through the public. That many people say something does not make it true."}}, {"front": {"vi": "Tuân thủ / Áp lực đồng thuận", "en": "Conformity"}, "back": {"vi": "Thay đổi lời nói, hành động cho giống số đông — dù trong lòng chưa chắc đã đồng ý.", "en": "Changing one's words or actions to match the majority — even without genuine inner agreement."}}, {"front": {"vi": "Tư duy nhóm", "en": "Groupthink"}, "back": {"vi": "Cả nhóm quá muốn giữ sự nhất trí, hòa khí, nên lờ đi rủi ro hoặc ý kiến trái chiều. (Irving Janis, 1972)", "en": "A group's excessive desire for consensus and harmony leads it to ignore risk or dissenting views. (Irving Janis, 1972)"}}, {"front": {"vi": "Giảm cá thể hóa", "en": "Deindividuation"}, "back": {"vi": "Cảm giác \"vô danh\" khi ở giữa đám đông — không có nghĩa là tự động mất lý trí hay hết trách nhiệm.", "en": "The feeling of \"anonymity\" within a crowd — this does not automatically mean losing reason or responsibility."}}, {"front": {"vi": "Căn tính xã hội", "en": "Social identity"}, "back": {"vi": "Phần bản thân bạn tự định nghĩa qua việc \"thuộc về\" một nhóm (vd: \"tôi là Huynh trưởng của GĐPT\").", "en": "The part of yourself you define through \"belonging\" to a group (e.g., \"I am a Huynh trưởng of the GĐPT\")."}}, {"front": {"vi": "Vô minh cộng hưởng", "en": "Ignorance resonating"}, "back": {"vi": "Khi một đám đông cùng khởi lên cảm xúc gốc từ tham/sân/si, các hạt giống này cộng hưởng thành một trường năng lượng tập thể (dòng bộc lưu) cuốn phăng khả năng suy xét độc lập.", "en": "When a crowd collectively gives rise to core emotions of greed, aversion or delusion, these seeds resonate into a collective energy field (a torrent) that sweeps away independent judgment."}}, {"front": {"vi": "Hành uẩn (saṅkhāra / saṅkhārakkhandha)", "en": "Saṅkhāra / Saṅkhārakkhandha"}, "back": {"vi": "Tập hợp các phản ứng, khuynh hướng và sự tạo tác của tâm trí — \"động cơ\" của ý chí, thúc đẩy quyết định, hành động, hình thành nghiệp lực.", "en": "The totality of psychological reactions, tendencies, and volitional activities — the \"engine\" of the will, driving actions and shaping karmic momentum."}}, {"front": {"vi": "Loka-samaññā & Parisā-sārajja", "en": "Loka-samaññā & Parisā-sārajja"}, "back": {"vi": "Áp lực từ \"quy ước thế gian\" (nhãn dán, chuẩn mực, trào lưu) và nỗi rụt rè, sợ hãi trước hội chúng khiến người ta không dám nói thật.", "en": "Pressure from \"worldly convention\" (labels, standards, trends) and timidity/fear before the assembly that keep people from daring to speak the truth."}}, {"front": {"vi": "Pāpamittatā (Ác tri giao — bạn xấu)", "en": "Pāpamittatā (Bad company)"}, "back": {"vi": "Áp lực từ nhóm bạn xấu (\"ác tri giao\") buộc cá nhân phải tuân theo để không bị tẩy chay, cô lập.", "en": "Pressure from a group of bad companions (\"ác tri giao\") that forces an individual to conform in order not to be shunned or isolated."}}, {"front": {"vi": "Kinh Kālāma — tiêu chí kiểm chứng", "en": "The Kālāma Sutta — criteria for verification"}, "back": {"vi": "Đừng vội tin vì truyền thống, đồn đại hay uy tín người nói. Hãy tự kiểm chứng: điều gì gây hại mình, hại người, khổ đau, bị người trí chê trách — đó là điều bất thiện.", "en": "Don't believe simply because of tradition, rumor, or the speaker's reputation. Verify for yourself: what causes harm, suffering, and is criticized by the wise is unwholesome."}}, {"front": {"vi": "\"Đi ngược dòng\"", "en": "\"Going against the stream\""}, "back": {"vi": "Dám sống đúng giá trị của mình dù phải cô đơn — nhưng không có nghĩa là tự cô lập hay chống lại cộng đồng.", "en": "Daring to live by one's own values even at the cost of loneliness — but not isolating oneself from or opposing the community."}}, {"front": {"vi": "Chủng tử (bīja)", "en": "Karmic seed (bīja)"}, "back": {"vi": "Khái niệm Duy Thức học: mọi hành vi, lời nói, ý nghĩ đều gieo \"hạt giống\" tiềm ẩn trong tạng thức; khi đủ duyên, hạt giống \"hiện hành\" thành tâm lý, hành vi mới.", "en": "A Yogācāra concept: every action, word, and thought plants a latent \"seed\" in the store-consciousness; when conditions are sufficient, it \"manifests\" as new mental states or behavior."}}, {"front": {"vi": "Tứ nhiếp pháp", "en": "Four Saṅgahavatthu"}, "back": {"vi": "Bố thí, Ái ngữ, Lợi hành, Đồng sự — bốn cách hành động cụ thể để chuyển hóa năng lượng tiêu cực của đám đông từ gốc rễ.", "en": "Generosity, kind speech, beneficial conduct, and consistency/impartiality — four concrete ways to transform a crowd's negative energy at its root."}}, {"front": {"vi": "Lục Hòa", "en": "The Six Harmonies"}, "back": {"vi": "Kiến hòa đồng giải, Khẩu hòa vô tránh, Giới hòa đồng tu, Thân hòa đồng trú, Ý hòa đồng duyệt, Lợi hòa đồng quân — sáu nguyên tắc chung sống hài hòa.", "en": "Harmony in View, Speech, Precepts, Body, Mind, and Benefits — six principles for harmonious living."}}], "quiz": [{"q": {"vi": "Theo tài liệu, \"đám đông\" (crowd) khác với \"quần chúng / số đông\" (masses) ở điểm nào?", "en": "According to the document, how does a \"crowd\" differ from \"the masses\"?"}, "options": {"vi": ["Đám đông ở cùng một nơi/sự kiện; quần chúng có thể không hề gặp nhau trực tiếp", "Hai từ này hoàn toàn đồng nghĩa", "Đám đông chỉ tồn tại trên mạng xã hội", "Quần chúng luôn nhỏ hơn đám đông"], "en": ["A crowd shares one place/event; the masses may never meet directly", "The two terms are completely synonymous", "A crowd only exists on social media", "The masses are always smaller than a crowd"]}, "correct": 0, "explain": {"vi": "Bảng thuật ngữ ở Phần 1 phân biệt rõ: đám đông = cùng một nơi/sự kiện; quần chúng/số đông = số đông trong xã hội, có thể không gặp nhau trực tiếp.", "en": "The Part 1 glossary distinguishes them clearly: a crowd shares the same place/event, while the masses are the many in society who may never meet directly."}}, {"q": {"vi": "Ai là tác giả đưa ra khái niệm \"Tư duy nhóm\" (Groupthink)?", "en": "Who introduced the concept of \"Groupthink\"?"}, "options": {"vi": ["Gustave Le Bon", "Sigmund Freud", "Irving Janis", "Gabriel Tarde"], "en": ["Gustave Le Bon", "Sigmund Freud", "Irving Janis", "Gabriel Tarde"]}, "correct": 2, "explain": {"vi": "Irving Janis mô tả Groupthink trong tác phẩm Victims of Groupthink (1972): nhóm quá muốn giữ nhất trí nên bỏ qua rủi ro thực tế.", "en": "Irving Janis described Groupthink in Victims of Groupthink (1972): a group's excessive desire for consensus leads it to ignore real risks."}}, {"q": {"vi": "Hiệu ứng bàng quan (Bystander Effect) của Darley & Latané cho thấy điều gì?", "en": "What does Darley & Latané's Bystander Effect show?"}, "options": {"vi": ["Đông người luôn giúp đỡ nhanh hơn", "Sự hiện diện của người khác có thể làm giảm khả năng một cá nhân ra tay giúp đỡ", "Chỉ trẻ em mới bị hiệu ứng này", "Đây là một khái niệm của Phật giáo"], "en": ["A larger crowd always helps faster", "The presence of others can reduce an individual's likelihood of stepping in to help", "Only children experience this effect", "This is a Buddhist concept"]}, "correct": 1, "explain": {"vi": "Mỗi cá nhân thường nghĩ \"chắc người khác sẽ làm\" — nên đông người không đồng nghĩa nhiều hành động giúp đỡ.", "en": "Each individual tends to think \"surely someone else will do it\" — so a larger crowd doesn't mean more helping behavior."}}, {"q": {"vi": "Theo Lý thuyết Căn tính Xã hội (Tajfel & Turner), cách nào giúp giảm ganh đua cục bộ giữa các Đội/Chúng?", "en": "According to Social Identity Theory (Tajfel & Turner), what helps reduce rivalry between teams?"}, "options": {"vi": ["Xóa bỏ hoàn toàn căn tính đội", "Tạo mục tiêu chung lớn hơn (superordinate goals) buộc các đội hợp tác", "Cấm các đội thi đua với nhau", "Chỉ định một đội làm lãnh đạo"], "en": ["Completely erase team identity", "Create larger shared (superordinate) goals that require teams to cooperate", "Forbid teams from competing at all", "Appoint one team as the leader"]}, "correct": 1, "explain": {"vi": "Tài liệu đề nghị không xóa bỏ căn tính đội, mà tạo mục tiêu chung lớn hơn buộc các đội tạm gác ranh giới để hợp tác.", "en": "The document recommends not erasing team identity, but creating larger shared goals that require teams to set aside boundaries to cooperate."}}, {"q": {"vi": "Ba cơ chế cốt lõi của tâm lý đám đông dưới lăng kính Phật giáo (Phần 3) là gì?", "en": "What are the three core mechanisms of crowd psychology seen through the Buddhist lens (Part 3)?"}, "options": {"vi": ["Vô minh cộng hưởng thành Hành uẩn (saṅkhāra); áp lực quy ước & sợ dư luận; áp lực bạn xấu (pāpamittatā)", "Tham, sân, si", "Giới, Định, Tuệ", "Bi, Trí, Dũng"], "en": ["Resonating ignorance into saṅkhāra; pressure from convention & fear of the assembly; bad-company pressure (pāpamittatā)", "Greed, aversion, delusion", "Precepts, Concentration, Wisdom", "Compassion, Wisdom, Courage"]}, "correct": 0, "explain": {"vi": "Phần 3 nêu ba cơ chế: vô minh cộng hưởng thành dòng chảy Hành uẩn (saṅkhāra); áp lực quy ước thế gian và sợ hãi trước hội chúng; áp lực từ bạn xấu (pāpamittatā).", "en": "Part 3 lists three mechanisms: ignorance resonating into a torrent of Mental Formations (saṅkhāra); pressure from worldly convention and fear of the assembly; and pressure from bad company (pāpamittatā)."}}, {"q": {"vi": "Theo Kinh Kālāma, tiêu chí nào Đức Phật đưa ra để biết một điều là bất thiện?", "en": "According to the Kālāma Sutta, what criterion did the Buddha give for knowing something is unwholesome?"}, "options": {"vi": ["Vì đó là truyền thống lâu đời", "Vì được đồn đại rộng rãi", "Nếu thực hành dẫn đến hại mình, hại người, khổ đau và bị người trí chê trách", "Vì người nói có uy tín"], "en": ["Because it is a long-standing tradition", "Because it is widely rumored", "If, when practiced, it leads to harm for oneself or others, causes suffering, and is criticized by the wise", "Because the speaker is reputable"]}, "correct": 2, "explain": {"vi": "Đức Phật dạy không tin chỉ vì truyền thống, đồn đại hay uy tín — mà tự kiểm chứng qua hậu quả thực tế.", "en": "The Buddha taught not to believe something merely from tradition, rumor, or reputation — but to verify it through its real-world consequences."}}, {"q": {"vi": "\"Đi ngược dòng\" (Aṅguttara Nikāya 4.5) trong tài liệu có nghĩa là gì?", "en": "What does \"going against the stream\" (Aṅguttara Nikāya 4.5) mean in the document?"}, "options": {"vi": ["Tự cô lập, chống lại cộng đồng", "Sống đúng giá trị của mình dù phải cô đơn tạm thời, vẫn giữ từ bi và trách nhiệm", "Luôn phản đối số đông", "Cho mình cao hơn người khác"], "en": ["Isolating oneself and opposing the community", "Living by one's own values even at the cost of temporary loneliness, while keeping compassion and responsibility", "Always opposing the majority", "Considering oneself above others"]}, "correct": 1, "explain": {"vi": "Tài liệu nhấn mạnh \"ngược dòng\" không phải tự cô lập hay chống đối, mà là giữ giới hạn đạo đức đồng thời hành xử với từ bi và trách nhiệm.", "en": "The document stresses that \"going against the stream\" is not isolation or defiance, but holding ethical boundaries while acting with compassion and responsibility."}}, {"q": {"vi": "Tứ nhiếp pháp gồm những gì?", "en": "What does the Four Saṅgahavatthu consist of?"}, "options": {"vi": ["Bố thí, Ái ngữ, Lợi hành, Đồng sự", "Giới, Định, Tuệ, Giải thoát", "Từ, Bi, Hỷ, Xả", "Sát, Đạo, Dâm, Vọng"], "en": ["Generosity, kind speech, beneficial conduct, consistency/impartiality", "Precepts, Concentration, Wisdom, Liberation", "Loving-kindness, Compassion, Joy, Equanimity", "Killing, stealing, sexual misconduct, false speech"]}, "correct": 0, "explain": {"vi": "Tứ nhiếp pháp gồm bốn hành động cụ thể: Bố thí, Ái ngữ, Lợi hành, Đồng sự — dùng để chuyển hóa năng lượng tiêu cực của đám đông từ gốc rễ.", "en": "The Four Saṅgahavatthu are four concrete actions: generosity, kind speech, beneficial conduct, and consistency — used to transform a crowd's negative energy at its root."}}, {"q": {"vi": "Theo tài liệu, vai trò của Huynh trưởng KHÔNG phải là gì?", "en": "According to the document, what is NOT the role of a Huynh trưởng?"}, "options": {"vi": ["Người đồng hành giúp đoàn sinh suy nghĩ độc lập", "\"Nắm quần chúng\" / kiểm soát đám đông", "Người bảo vệ đoàn sinh", "Người giúp giảm khổ đau bằng thân - khẩu - ý"], "en": ["A companion who helps members think independently", "\"Controlling the masses\"", "Someone who protects members", "Someone who helps reduce suffering through body, speech, and mind"]}, "correct": 1, "explain": {"vi": "Kết luận nêu rõ: \"Nhiệm vụ của Huynh trưởng không phải là 'nắm quần chúng'\".", "en": "The conclusion states clearly: \"The task of a Huynh trưởng is not to 'control the masses.'\""}}, {"q": {"vi": "Khi điều phối trại hay công tác, ứng dụng của Hiệu ứng bàng quan khuyên Huynh trưởng nên làm gì?", "en": "When coordinating a camp or task, what does the Bystander Effect's application advise a Huynh trưởng to do?"}, "options": {"vi": ["Kêu gọi chung chung \"ai đó giúp\"", "Phân định rõ ai thực hiện, ai chịu trách nhiệm chính", "Để mọi người tự giác làm", "Không cần phân công vì đội đông người"], "en": ["Give a vague call to action like \"could someone help\"", "Clearly assign who is responsible and who carries the main duty", "Let everyone act on their own initiative", "Skip assigning tasks since the team is large"]}, "correct": 1, "explain": {"vi": "Tài liệu khuyên: đừng kêu gọi chung chung; luôn phân định rõ ai thực hiện, ai là người có trách nhiệm chính.", "en": "The document advises: never issue a vague call to action; always clearly assign who is responsible and who carries the main duty."}}]}</script>
+<script>
+const DATA = JSON.parse(document.getElementById('artifact-data').textContent);
+const ACCENTS = ['sage','lotus','saffron','sky','sage','lotus','saffron'];
+
+const STR = {
+  vi: {
+    read:'Đọc', flash:'Flashcard', quiz:'Trắc nghiệm',
+    heroKicker:'GĐPT · Tài liệu tu học',
+    continueReadPrefix:'Đã đọc', continueReadBtn:'Tiếp tục: Flashcard',
+    startFlash:'Bắt đầu Flashcard',
+    flashBackHint:'Chạm để lật lại', flashFrontHint:'Chạm để xem giải nghĩa',
+    flashOf:'Thẻ', flashContinue:'Tiếp tục: Trắc nghiệm',
+    quizOf:'Câu', quizNext:'Câu tiếp theo', quizSubmit:'Nộp bài',
+    quizStart:'Bắt đầu trắc nghiệm',
+    resultsTitle:'Kết quả của anh/chị', resultsScoreOf:'trên',
+    congrats:'Chúc mừng anh chị đã hoàn thành kiến thức cơ bản trước khi bắt đầu buổi học!',
+    reviewTitle:'Xem lại đáp án', backToStart:'Về đầu tài liệu',
+    fnTag:'Ghi chú',
+    footnoteHeading:'Chú thích',
+  },
+  en: {
+    read:'Read', flash:'Flashcards', quiz:'Quiz',
+    heroKicker:'GĐPT · Study Document',
+    continueReadPrefix:'Read', continueReadBtn:'Continue: Flashcards',
+    startFlash:'Start Flashcards',
+    flashBackHint:'Tap to flip back', flashFrontHint:'Tap to see the meaning',
+    flashOf:'Card', flashContinue:'Continue: Quiz',
+    quizOf:'Question', quizNext:'Next question', quizSubmit:'Submit',
+    quizStart:'Start Quiz',
+    resultsTitle:'Your Results', resultsScoreOf:'out of',
+    congrats:"Congratulations — you've completed the core knowledge before the session begins!",
+    reviewTitle:'Review Answers', backToStart:'Back to top',
+    fnTag:'Note',
+    footnoteHeading:'Footnote',
+  }
+};
+
+let state = {
+  lang:'vi',
+  stage:'read', // read | flash | quiz | results
+  readSet: new Set(),
+  miniOpen: new Set(),
+  flashIndex:0,
+  flashFlipped:false,
+  flashSeen:new Set(),
+  quizIndex:0,
+  quizAnswers:{}, // qIndex -> optionIndex
+  quizSubmitted:false,
+};
+
+function t(key){ return STR[state.lang][key]; }
+
+function setLang(l){
+  state.lang = l;
+  document.getElementById('btnLangVi').classList.toggle('active', l==='vi');
+  document.getElementById('btnLangEn').classList.toggle('active', l==='en');
+  document.documentElement.lang = l;
+  render();
+}
+
+/* ---------------- HEADER / PROGRESS ---------------- */
+function renderHeader(){
+  document.getElementById('brandText').textContent = DATA.meta.title[state.lang];
+  const notRead = state.stage!=='read';
+  document.getElementById('topBackBtn').classList.toggle('show', notRead);
+  document.getElementById('brandGroup').style.display = notRead ? 'none' : 'flex';
+  document.getElementById('topBackLabel').textContent = state.lang==='vi' ? 'Đọc tài liệu' : 'Read document';
+  document.querySelectorAll('[data-i18n-label]').forEach(el=>{
+    const k = el.getAttribute('data-i18n-label');
+    el.textContent = t(k);
+  });
+  const total = DATA.sections.length;
+  const readPct = Math.round((state.readSet.size/total)*100);
+  document.getElementById('pbRead').style.width = readPct+'%';
+  const flashPct = Math.round((state.flashSeen.size/DATA.flashcards.length)*100);
+  document.getElementById('pbFlash').style.width = (state.stage==='read'?0:flashPct)+'%';
+  const answered = Object.keys(state.quizAnswers).length;
+  const quizPct = state.quizSubmitted ? 100 : Math.round((answered/DATA.quiz.length)*100);
+  document.getElementById('pbQuiz').style.width = ((state.stage==='read'||state.stage==='flash')?0:quizPct)+'%';
+
+  document.querySelectorAll('.progress-step').forEach(el=>{
+    const s = el.getAttribute('data-stage');
+    el.classList.toggle('current', s===state.stage || (state.stage==='results' && s==='quiz'));
+  });
+}
+
+/* ---------------- FOOTNOTE MODAL ---------------- */
+function openFn(n){
+  document.getElementById('fnTag').textContent = t('fnTag')+' '+n;
+  document.getElementById('fnBody').textContent = DATA.footnotes[state.lang][n];
+  document.getElementById('fnModal').classList.add('show');
+}
+function closeFn(e){
+  document.getElementById('fnModal').classList.remove('show');
+}
+document.addEventListener('click', function(e){
+  const btn = e.target.closest('.fn-ref');
+  if(btn){ openFn(btn.getAttribute('data-fn')); }
+});
+
+/* ---------------- STAGE: READ ---------------- */
+function renderRead(){
+  const root = document.getElementById('stageRead');
+  const lang = state.lang;
+  let html = `
+    <div class="hero">
+      <span class="lotus-mark">🪷</span>
+      <div style="font-size:12px;font-weight:700;letter-spacing:.03em;color:var(--sage-ink);text-transform:uppercase;margin-bottom:6px;">${t('heroKicker')}</div>
+      <h1>${DATA.meta.title[lang]}</h1>
+      <div class="subtitle">${DATA.meta.subtitle[lang]}</div>
+    </div>
+  `;
+  DATA.sections.forEach((sec, i)=>{
+    const accent = ACCENTS[i % ACCENTS.length];
+    const isOpen = sec._open;
+    const isRead = state.readSet.has(sec.id);
+    html += `
+      <div class="section-card ${isOpen?'open':''}" style="--accent:var(--${accent});--accent-bg:var(--${accent}-bg);--accent-ink:var(--${accent}-ink);">
+        <button class="section-head" onclick="toggleSection('${sec.id}')">
+          <span class="num ${isRead?'check':''}">${isRead ? '✓' : (i+1)}</span>
+          <span class="htitle">${sec.title[lang]}</span>
+          <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="section-body">
+          <div class="section-body-inner">${sec.html[lang]}${isOpen ? `<button class="collapse-btn" onclick="toggleSection('${sec.id}')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>${lang==='vi'?'Thu gọn':'Collapse'}</button>` : ''}</div>
+        </div>
+      </div>
+    `;
+  });
+  root.innerHTML = html;
+
+  // inject timeline into its placeholder (Part 2)
+  const tlHost = root.querySelector('#__TIMELINE__');
+  if(tlHost){ tlHost.outerHTML = renderTimelineHtml(lang); }
+
+  // apply persisted mini-accordion open states
+  root.querySelectorAll('.mini-acc').forEach(el=>{
+    if(state.miniOpen.has(el.getAttribute('data-mid'))) el.classList.add('open');
+  });
+}
+function toggleSection(id){
+  const sec = DATA.sections.find(s=>s.id===id);
+  sec._open = !sec._open;
+  if(sec._open){ state.readSet.add(id); }
+  renderRead();
+  renderContinueBar();
+  renderHeader();
+}
+function toggleMini(btn){
+  const wrap = btn.closest('.mini-acc');
+  const mid = wrap.getAttribute('data-mid');
+  if(state.miniOpen.has(mid)) state.miniOpen.delete(mid); else state.miniOpen.add(mid);
+  renderRead();
+}
+
+/* ---------------- TIMELINE ---------------- */
+function renderTimelineHtml(lang){
+  const nodes = DATA.timeline.map(pt=>`
+    <button class="timeline-node" onclick="openThinker('${pt.anchor}')">
+      <span class="tl-line"></span>
+      <span class="tl-dot"></span>
+      <span class="tl-year">${pt.year}</span>
+      <span class="tl-name">${pt.name}</span>
+      <span class="tl-idea">${pt.idea[lang]}</span>
+    </button>
+  `).join('');
+  const title = lang==='vi' ? 'Dòng thời gian tư tưởng — từ Le Bon đến nay' : 'Timeline of thinkers — from Le Bon to today';
+  return `<div class="timeline-wrap"><div class="timeline-title">${title}</div><div class="timeline-track">${nodes}</div></div>`;
+}
+function openThinker(anchor){
+  const sec = DATA.sections.find(s=>s.id==='part2');
+  sec._open = true;
+  state.readSet.add('part2');
+  renderRead();
+  renderHeader();
+  renderContinueBar();
+  requestAnimationFrame(()=>{
+    setTimeout(()=>{
+      const el = document.getElementById(anchor);
+      if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
+    }, 60);
+  });
+}
+function goToRead(){
+  state.stage = 'read';
+  renderAll();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+/* ---------------- STAGE: FLASHCARDS ---------------- */
+function renderFlash(){
+  const root = document.getElementById('stageFlash');
+  const lang = state.lang;
+  const cards = DATA.flashcards;
+  const i = state.flashIndex;
+  const card = cards[i];
+  state.flashSeen.add(i);
+  const dots = cards.map((c,idx)=>`<span class="flash-dot ${state.flashSeen.has(idx)?'seen':''} ${idx===i?'current':''}"></span>`).join('');
+  root.innerHTML = `
+    <div class="flash-wrap">
+      <div class="flash-counter">${t('flashOf')} ${i+1} / ${cards.length}</div>
+      <div class="flash-scene">
+        <div class="flash-card ${state.flashFlipped?'flipped':''}" id="flashCardEl" onclick="flipCard()">
+          <div class="flash-face front">
+            <div class="kicker">${lang==='vi'?'Thuật ngữ':'Term'}</div>
+            <div class="term">${card.front[lang]}</div>
+            <div class="tap-hint">${t('flashFrontHint')}</div>
+          </div>
+          <div class="flash-face back">
+            <div class="kicker">${lang==='vi'?'Giải nghĩa':'Meaning'}</div>
+            <div class="term-repeat">${card.front[lang]}</div>
+            <div class="def">${card.back[lang]}</div>
+            <div class="tap-hint">${t('flashBackHint')}</div>
+          </div>
+        </div>
+      </div>
+      <div class="flash-nav">
+        <button class="iconbtn" onclick="flashPrev()" ${i===0?'disabled':''} aria-label="Previous">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="iconbtn" onclick="flashNext()" ${i===cards.length-1?'disabled':''} aria-label="Next">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <div class="flash-dot-row">${dots}</div>
+    </div>
+  `;
+  renderHeader();
+  renderContinueBar();
+}
+function flipCard(){
+  state.flashFlipped = !state.flashFlipped;
+  renderFlash();
+  const el = document.getElementById('flashCardEl');
+  if(el){
+    const cls = state.flashFlipped ? 'flip-to-back' : 'flip-to-front';
+    el.classList.add(cls);
+    el.addEventListener('animationend', function handler(){
+      el.classList.remove('flip-to-back','flip-to-front');
+      el.removeEventListener('animationend', handler);
+    });
+  }
+}
+function flashPrev(){ if(state.flashIndex>0){ state.flashIndex--; state.flashFlipped=false; renderFlash(); } }
+function flashNext(){ if(state.flashIndex<DATA.flashcards.length-1){ state.flashIndex++; state.flashFlipped=false; renderFlash(); } }
+
+/* ---------------- STAGE: QUIZ ---------------- */
+function renderQuiz(){
+  const root = document.getElementById('stageQuiz');
+  const lang = state.lang;
+  const qs = DATA.quiz;
+  const i = state.quizIndex;
+  const q = qs[i];
+  const answered = state.quizAnswers[i];
+  const dots = qs.map((_,idx)=>`<button class="quiz-dot ${state.quizAnswers[idx]!==undefined?'answered':''} ${idx===i?'current':''}" onclick="goToQuizQuestion(${idx})">${idx+1}</button>`).join('');
+
+  let optionsHtml = '';
+  q.options[lang].forEach((opt, idx)=>{
+    let cls = 'quiz-option';
+    if(answered!==undefined){
+      if(idx===q.correct) cls += ' correct';
+      else if(idx===answered) cls += ' wrong';
+    }
+    optionsHtml += `<button class="${cls}" onclick="answerQuiz(${idx})" ${answered!==undefined?'disabled':''}>${opt}</button>`;
+  });
+
+  let explainHtml = '';
+  if(answered!==undefined){
+    explainHtml = `<div class="quiz-explain">${q.explain[lang]}</div>
+    <button class="quiz-retry-btn" onclick="retryQuestion(${i})">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 12a9 9 0 1 1 3 6.7M3 12V7m0 5h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      ${lang==='vi'?'Trả lời lại câu này':'Answer this again'}
+    </button>`;
+  }
+
+  const isLast = i === qs.length-1;
+  let nextBtn = '';
+  if(answered!==undefined){
+    nextBtn = `<button class="btn" onclick="${isLast?'submitQuiz()':'quizNext()'}">${isLast? t('quizSubmit') : t('quizNext')}</button>`;
+  }
+
+  root.innerHTML = `
+    <div class="quiz-dot-row">${dots}</div>
+    <div class="quiz-progress">${t('quizOf')} ${i+1} / ${qs.length}</div>
+    <div class="quiz-q">${q.q[lang]}</div>
+    <div class="quiz-options">${optionsHtml}</div>
+    ${explainHtml}
+    ${nextBtn}
+  `;
+  renderHeader();
+  renderContinueBar();
+}
+function answerQuiz(idx){
+  state.quizAnswers[state.quizIndex] = idx;
+  renderQuiz();
+}
+function quizNext(){
+  if(state.quizIndex < DATA.quiz.length-1){ state.quizIndex++; renderQuiz(); }
+}
+function goToQuizQuestion(idx){
+  state.quizIndex = idx;
+  renderQuiz();
+}
+function retryQuestion(idx){
+  delete state.quizAnswers[idx];
+  state.quizIndex = idx;
+  renderQuiz();
+}
+function submitQuiz(){
+  state.quizSubmitted = true;
+  state.stage = 'results';
+  renderAll();
+  setTimeout(()=>{ fireConfetti(); fireFireworks(); }, 250);
+}
+function retakeQuiz(){
+  state.quizAnswers = {};
+  state.quizIndex = 0;
+  state.quizSubmitted = false;
+  state.stage = 'quiz';
+  renderAll();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+/* ---------------- RESULTS ---------------- */
+function renderResults(){
+  const root = document.getElementById('stageQuiz');
+  const lang = state.lang;
+  const qs = DATA.quiz;
+  let correct = 0;
+  qs.forEach((q,idx)=>{ if(state.quizAnswers[idx]===q.correct) correct++; });
+
+  let reviewHtml = qs.map((q,idx)=>{
+    const yourIdx = state.quizAnswers[idx];
+    const ok = yourIdx===q.correct;
+    return `<div class="review-item">
+      <div class="q">${idx+1}. ${q.q[lang]}</div>
+      <div class="${ok?'a-correct':'a-wrong'}">${ok?'✓':'✕'} ${q.options[lang][yourIdx]}</div>
+      ${!ok?`<div class="a-correct">→ ${q.options[lang][q.correct]}</div>`:''}
+    </div>`;
+  }).join('');
+
+  root.innerHTML = `
+    <div class="results">
+      <span class="big-emoji">🎆</span>
+      <h2>${t('resultsTitle')}</h2>
+      <div class="score">${correct} / ${qs.length}</div>
+      <div class="congrats">🎉 ${t('congrats')}</div>
+      <button class="btn retake-btn" onclick="retakeQuiz()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 12a9 9 0 1 1 3 6.7M3 12V7m0 5h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        ${lang==='vi'?'Làm lại trắc nghiệm':'Retake the quiz'}
+      </button>
+    </div>
+    <div class="review-title">${t('reviewTitle')}</div>
+    ${reviewHtml}
+  `;
+  renderHeader();
+  renderContinueBar();
+}
+
+/* ---------------- CONTINUE BAR ---------------- */
+function renderContinueBar(){
+  const bar = document.getElementById('continueBar');
+  const status = document.getElementById('continueStatus');
+  const btn = document.getElementById('continueBtn');
+  const lang = state.lang;
+
+  if(state.stage==='read'){
+    const total = DATA.sections.length;
+    const readCount = state.readSet.size;
+    status.textContent = `${t('continueReadPrefix')} ${readCount}/${total}`;
+    btn.textContent = t('continueReadBtn');
+    btn.disabled = readCount < total;
+    btn.onclick = ()=>{ state.stage='flash'; renderAll(); window.scrollTo({top:0,behavior:'smooth'}); };
+    bar.style.display='block';
+  } else if(state.stage==='flash'){
+    const total = DATA.flashcards.length;
+    const seen = state.flashSeen.size;
+    status.textContent = `${lang==='vi'?'Đã xem':'Viewed'} ${seen}/${total}`;
+    btn.textContent = t('flashContinue');
+    btn.disabled = seen < total;
+    btn.onclick = ()=>{ state.stage='quiz'; renderAll(); window.scrollTo({top:0,behavior:'smooth'}); };
+    bar.style.display='block';
+  } else {
+    bar.style.display='none';
+  }
+}
+
+/* ---------------- CONFETTI ---------------- */
+function fireConfetti(){
+  const colors = ['#8FB988','#E8A3B0','#E7BA53','#93BEDB','#F3C9D0'];
+  const count = 90;
+  for(let i=0;i<count;i++){
+    const el = document.createElement('div');
+    el.className = 'confetti-piece';
+    const size = 6 + Math.random()*7;
+    el.style.width = size+'px';
+    el.style.height = (size*0.4 + Math.random()*size*0.6)+'px';
+    el.style.left = (Math.random()*100)+'vw';
+    el.style.background = colors[Math.floor(Math.random()*colors.length)];
+    const duration = 2.6 + Math.random()*1.8;
+    const rot = (Math.random()>0.5?1:-1) * (180+Math.random()*360);
+    el.style.setProperty('--rot', rot+'deg');
+    el.style.animationDuration = duration+'s';
+    el.style.animationDelay = (Math.random()*0.5)+'s';
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(), (duration+0.6)*1000);
+  }
+}
+function fireFireworks(){
+  const colors = ['#8FB988','#E8A3B0','#E7BA53','#93BEDB','#F3C9D0','#fff'];
+  const burstCount = 5;
+  for(let b=0;b<burstCount;b++){
+    setTimeout(()=>{
+      const originX = 12 + Math.random()*76;
+      const originY = 12 + Math.random()*28;
+      const particles = 26;
+      for(let p=0;p<particles;p++){
+        const el = document.createElement('div');
+        el.className = 'spark';
+        const size = 5 + Math.random()*4;
+        el.style.width = size+'px';
+        el.style.height = size+'px';
+        el.style.left = originX+'vw';
+        el.style.top = originY+'vh';
+        el.style.background = colors[Math.floor(Math.random()*colors.length)];
+        const angle = (Math.PI*2)*(p/particles) + Math.random()*0.25;
+        const dist = 55 + Math.random()*75;
+        el.style.setProperty('--dx', (Math.cos(angle)*dist)+'px');
+        el.style.setProperty('--dy', (Math.sin(angle)*dist)+'px');
+        const dur = 0.75 + Math.random()*0.5;
+        el.style.animationDuration = dur+'s';
+        document.body.appendChild(el);
+        setTimeout(()=>el.remove(), dur*1000+120);
+      }
+    }, b*320);
+  }
+}
+
+/* ---------------- MASTER RENDER ---------------- */
+function renderAll(){
+  document.getElementById('stageRead').style.display = state.stage==='read' ? 'block':'none';
+  document.getElementById('stageFlash').style.display = state.stage==='flash' ? 'block':'none';
+  document.getElementById('stageQuiz').style.display = (state.stage==='quiz'||state.stage==='results') ? 'block':'none';
+
+  if(state.stage==='read') renderRead();
+  else if(state.stage==='flash') renderFlash();
+  else if(state.stage==='quiz') renderQuiz();
+  else if(state.stage==='results') renderResults();
+
+  renderHeader();
+  renderContinueBar();
+}
+function render(){ renderAll(); }
+
+DATA.sections.forEach(s=>{ s._open = false; });
+render();
+</script>
+</body>
+</html>
